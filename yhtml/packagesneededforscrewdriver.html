@@ -1,0 +1,55 @@
+<html>
+
+<div style="border:1px solid #000; padding:10px">
+<p>    
+    yroot --create newyroot 4.8-200090518 <br>
+    yinst install -branch test ynodejs <br>
+    yinst i yui3  <br>
+    yinst i ynodejs_jsdom -br test  <br>
+    yinst i ynodejs_libxmljs -br test  <br>
+    <hr /> Below is the cmd to remove permission problems with access<hr />
+    yinst set ynodejs_core.file_accessdir=/ <br>
+    yinst set ynodejs_core.open_basedir=/ <br>
+    
+</p>    
+</div>
+
+<p><a href="http://twiki.corp.yahoo.com/view/Cocktails/CodingConventions"> Coding conventions for javascript at YAHOO </a>  </p>
+<p><a href="http://twiki.corp.yahoo.com/view/Cocktails/NodeBestPractices"> NODE.JS best practices at YAHOO </a>  </p>
+
+<p>
+<a href='http://dist.corp.yahoo.com/cgi-bin/htsearch?words=ynodejs_&restrict=dist.corp.yahoo.com%2F&exclude=version_info&type=pkg'> link to nodejs dist package repo</a>  <br> <br> 
+Above is the link to all packages!! <br>
+
+
+
+yroot --create nodesd 4.8-20090518
+<br>
+http://twiki.corp.yahoo.com/view/Devel/NodeJSHelloWorld
+<br>
+yinst install -branch test ynodejs;
+<br>
+yinst install ynodejs_dev
+<br>
+
+
+
+start server as: node-start ./path/to/app.js
+<br>
+use ctrl-c to kill server
+<br>
+You can set port the and host through the following yinst settings as well:<br>
+
+ynodejs.port<br>
+ynodejs.host<br>
+You can use CURL to test your application's availability:<br>
+    % curl 'http://localhost:80/'<br>
+    Hello, world!<br>
+
+
+	$  yinst set ynodejs_core.file_accessdir=/<br>
+	$  yinst set ynodejs_core.open_basedir=/<br>
+	
+	to prevent permission access proble<br>
+</p>    
+</html>

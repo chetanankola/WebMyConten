@@ -1,0 +1,482 @@
+/*reset css meyer*/
+* { margin: 0; padding: 0; border: 0; outline: 0; }
+/*1. old body
+width:1259px;
+body {  background:#fff url('../images/justboy.png') no-repeat fixed 0 0; font: normal 16px Georgia, "Times New Roman", Times, serif; color:#888 }
+ 2. css x resize e gestione sfondo adv ok*/
+body { font: normal 16px Georgia, "Times New Roman", Times, serif; color:#888 }
+img.bg {
+height:auto;
+left:0;
+min-height:100%;
+min-width:1024px;
+position:fixed;
+top:0;
+width:100%;
+z-index:1
+}
+/*------------------------------------------------------------------------ elementi comuni ------------------------------------------------------------*/
+.relative { position:relative; }
+.floatleft { float:left; }
+.floatright { float:right; }
+.clear { clear:both; }
+.spacer { height:6px; clear:both; }
+.spacer2x { height:12px; clear:both; }
+.spacerdashed { margin:6px 0 6px 0; border-bottom:1px dashed #888; clear:both; }
+.noPadding { padding:0 8px!important;}
+.noPaddingTop { padding:0 8px 8px 8px!important;}
+.marginsx8 {margin-left:8px;}
+.margintop3 {margin-top:3px;}
+.alert { color:#f3800f; }
+.obj_hidden { display:none; }
+.obj_visible { display:inline; }
+.indenttext { margin:12px 0 12px 20px; }
+/*----------heading tag---------*/
+/*h1, h2 { font: normal 24px Georgia, "Times New Roman", Times, serif; }
+	.cont_maindiv h2 { margin:0; padding:0; text-transform:uppercase; color:#000; font: normal 16px Georgia, "Times New Roman", Times, serif; }*/
+/*h2 ridefinito nel lancio col sx: div.lancio_sx h2*//h3, h4 { font:bold 12px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif; line-height:14px; }
+/*h5 { font:normal 12px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif; line-height:14px; }
+p  { margin-bottom:8px; }	*/
+/*---------z-index x background----------*/
+
+
+/*---------testo-------------*/
+.trebuchet-12 { font:normal 12px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif;}
+.trebuchet-10 { font:normal 10px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif;}
+.black { color:#000 }
+.gray { color:#888 }
+.white { color:#fff }
+/*---------link--------------*/
+a { font:normal 10px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif; color:#888; text-decoration:none; }
+	html body a:hover, a:hover { color:#000; background-color:#ccff00; border-bottom:1px solid #000; }
+a img {border: none;}
+a:focus {outline:none;}	
+/*link paginazione*/
+a.next { font:bold 12px Georgia, "Times New Roman", Times, serif; float:right; border-bottom:1px solid #FFF; }  
+a.previous { font:bold 12px Georgia, "Times New Roman", Times, serif; float:right; margin-right:10px; } 
+div.playall a { font:normal 16px Georgia, "Times New Roman", Times, serif !important; }
+	a.link_trebuchet-12 { font:normal 12px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif; border-bottom:1px solid; }
+/*link interni su testo georgia 16*/
+a.linkInterni { font: normal 16px Georgia, "Times New Roman", Times, serif; border-bottom:1px solid #888; }
+	a.linkInterni:hover { background-color:#ccff00; border-bottom:1px solid #000; }
+/*risolve problema sull'hover con 1px che si aggiunge in verticale */
+a.link1px { border-bottom:1px solid #fff; }
+	a.link1px:hover { border-bottom:1px solid #000; }
+#lnkMoreTags, #lnkLessTags { border-bottom:1px solid #000; margin:-10px 5px 0 0; font-size:12px; float:right }
+	#lnkMoreTags:hover , #lnkLessTags:hover { border-bottom:1px solid #000; }
+/*pulsante moodit*/
+a.linkMoodIt { font:normal 10px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif; text-decoration:none; }
+	html body a.linkMoodIt:hover, #sponsorLink a:hover  {  border-bottom:none; background:none; }
+/*eccezioni per il border-bottom hover*/
+html body a.loading:hover, html body .tools dl dd a:hover, html body #containerAvatar dl dd a:hover, html body a.gototop:hover, a#logo:hover, a#logoWhite:hover, html body a#bckLink:hover { border-bottom:0 } 
+/*-------fine link----------*/
+/*validazione e input con autocompletamento suggeritore*/
+.jsvalidation { margin-top:22px; height:18px; width:342px; font:normal 12px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif; color:#f3800f; display:block; }
+.border { height:8px; background-color:black; clear:both; }
+/*autocomplete tira fuori in un altro css*/
+#mood_tags_box, #situation_tags_box { margin-top:5px; font:normal 12px Trebuchet Ms, Verdana, Arial, Helvetica, sans-serif; color:#888; border-top:1px dashed #888; border-bottom:1px dashed #888; background-color:#FFF }
+	#mood_tags_box ul, #situation_tags_box ul{ margin:8px 8px 8px 22px;}
+		#mood_tags_box li, #situation_tags_box li{ list-style-image:url(../img/circle_tooltip.png); background-color:#FFFF33; cursor:pointer; padding-left:3px }
+		#mood_tags_box li.selected, #situation_tags_box li.selected{ background-color: #ccff00; }
+/*fine input autocomplete*/
+/*-----------------------------------------elementi layout------------------------------*/
+/*margin:15px 8px 0 10px;*/
+div#container { float:left; margin:15px 8px 0 10px; width:775px; display:inline }
+	div#header { float:left; width:100%; height:95px }
+	div#content { float:left; width:100%; position:relative }
+		div#content div#left-col { float:left; width:194px }
+		div#content div#right-col { float:right; width:581px }
+	#footer { float:left; width:725px; padding: 11px 25px 0 25px; position:relative }
+#extra-container { float:left; width:300px }
+/*nota sfondo link: ho messo a position:relative content, footer, containerLogo*/
+/*-----------------------------------------------------------------header-----------------------------------------------------*/
+#containerLogo { text-indent:-5000px; float:left; width:180px; height:85px; position:relative }
+	a#logo { float:left; width:180px; height:85px; background: transparent url(../img/logo.png) no-repeat 0 0; }
+	/*logo bianco*/	
+	a#logoWhite { float:left; width:180px; height:85px; background: transparent url(../img/logo_white.png) no-repeat 0 0; }
+/*header con avatar se loggato*/
+#containerAvatar { width:64px; height:64px; float:right; margin-top:-15px; border-bottom:6px solid #000; position:relative; z-index:10 }
+	div#containerAvatar dl dd { float:left; position: relative; margin:0 0 2px 0; padding:0; border:0; width:80px; background:none; }
+		div#containerAvatar a { display: block; padding: 0; font: normal 12px Georgia, "Times New Roman", Times, serif; color:#888; text-decoration: none; background: transparent url(../img/circle_tooltip.png) no-repeat 5px 9px }
+				div#containerAvatar dd dl { display: none; position:relative; }
+					div#containerAvatar dd:hover dl { display: block; position: absolute; left:37px; top:37px; z-index:10; width:110px; border-bottom:6px solid #000;border-top:6px solid #000; background:#fff }
+					div#containerAvatar dd dd { border-bottom: 1px dashed #888; width: 110px; margin:0; padding:0 } 
+					div#containerAvatar dd dl span { position:absolute; top:-16px; left:0; background: transparent url(../img/indice_tooltip_revert.png) no-repeat 0 0; width:220px; height:10px }
+					div#containerAvatar dd dd a { padding:5px 5px 5px 18px }
+					div#containerAvatar dl dd dl dd a:hover { background-color:#ccff00; border-bottom:0 }
+/*fine header con avatar se loggato*/
+/*social x dasboard e header*/
+div#socialLink { float:left; margin:0 0 0 -8px; width:100%; display:inline }
+					div#socialLink ul { list-style:none; display:inline; float:left }
+						div#socialLink ul li { list-style-type: none; float:left; margin: 0 0 0 8px }
+								div#socialLink ul li a:hover { background:none; border-bottom:0; }
+/*container social stereomood*/
+#stereoSocial { position:absolute; top:0; left:793px; width:196px; padding:4px 0 0 4px; display:inline; border-bottom:6px solid #000; float:left; background-color:#FFF }
+
+/*--------------------menu header e menu footer--------------------*/
+#menu ul#sx { display:inline; float:left; margin-bottom:2px; }
+#menu ul#dx { display:inline; float:right; margin-bottom:2px; }
+	#menu ul#sx li, #menu ul#dx li, #footer ul#sx li, #footer ul#dx li { display:inline; float:left; list-style:none; font:normal 12px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif; color:#000; }
+		#menu ul#sx li a, #footer ul#sx li a { display:block; float:left; margin-right:15px; border-bottom: 1px solid transparent; font:normal 12px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif; color:#FFF; }
+		#menu ul#dx li a, #footer ul#dx li a { display:block; float:left; margin-left:15px; border-bottom: 1px solid transparent; font:normal 12px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif; color:#FFF; }
+		/*black*/
+		#menu ul#sx li a.black, #footer ul#sx li a.black { display:block; float:left; margin-right:15px; border-bottom: 1px solid transparent; font:normal 12px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif; color:#000; }
+		#menu ul#dx li a.black, #footer ul#dx li a.black { display:block; float:left; margin-left:15px; border-bottom: 1px solid transparent; font:normal 12px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif; color:#000; }
+		/*hover*/
+		html body #menu ul#sx li a:hover, html body #menu ul#dx li a:hover, html body #menu ul#sx li a.black:hover, html body #menu ul#dx li a.black:hover, html body #footer ul#sx li a:hover, html body #footer ul#dx li a:hover, html body #footer ul#sx li a.black:hover, html body #footer ul#dx li a.black:hover {  background: #ccff00; color:#000; border-bottom: 1px solid #000;  }
+		/*selezionati*/
+			#menu ul#sx li.selected, #footer ul#sx li.selected { margin-right:15px; background: #ccff00; cursor:default; border-bottom:1px solid #000;  }
+			#menu ul#dx li.selected, #footer ul#dx li.selected { margin-left:15px; background: #ccff00; cursor:default; border-bottom:1px solid #000; }
+#linea_footer { text-align:center; margin:0 auto 10px auto; border-top:1px solid #fff; width:700px; height:1px }
+	/*black*/
+#linea_footer.black { text-align:center; margin:0 auto 10px auto; border-top:1px solid #000; width:700px; height:1px }
+#footer ul#sx { display:inline; float:left; margin-bottom:20px; }
+#footer ul#dx { display:inline; float:right; margin-bottom:20px; }
+/*--------------------fine menu header e menu footer--------------------*/
+/*--------------------box layout---------------------*/
+/*box grande 100% */
+div.cont_long { float:left; width:759px; margin-bottom:8px; border-bottom: 6px solid black; border-top: 6px solid black; padding:8px; background-color:#FFF }
+div.cont_longCloud { float:left; width:759px; margin-bottom:8px; padding:8px; background-color:#000 }
+	/*2 colonne interne al box 100% modello bloglist*/
+	.twoColsLeft { float:left; width:376px }
+	.twoColsRight { float:right; width:376px }
+		.twoColsLeft ul, .twoColsRight ul, ul.puntato  { margin:8px 8px 8px 22px }
+			.twoColsLeft li, .twoColsRight li { list-style-image:url(../img/circle_tooltip.png); padding:0 0 5px 3px; font:normal 10px Trebuchet Ms, Verdana, Arial, Helvetica, sans-serif }
+			ul.puntato li { list-style-image:url(../img/circle_tooltip.png); padding:0 0 5px 3px; font:normal 12px Trebuchet Ms, Verdana, Arial, Helvetica, sans-serif }
+				.twoColsLeft li a, .twoColsRight li a { text-decoration:none; font:normal 12px Trebuchet Ms, Verdana, Arial, Helvetica, sans-serif; }
+					.twoColsLeft li a:hover, .twoColsRight li a:hover { background-color: #ccff00 }
+/*ol terms of use*/
+ ol.terms { float:left; margin:0 8px 8px 22px }
+			ol.terms li { list-style: decimal; padding:0 0 0 3px }
+				ol.terms li a { text-decoration:none; font-size:12px }
+					ol.terms li a:hover { background-color: #ccff00 }
+			ol.termsint1 { float:left; margin:0 8px 8px 12px }
+				ol.termsint1 li { list-style: none; padding:0 0 0 3px }
+			ol.termsint2 { float:left; margin:0 8px 8px 22px }
+				ol.termsint2 li { list-style: none; padding:0 0 0 3px }		
+/*box piccolo sinistro 50% */
+div.cont_short_sx { float:left; width:367px; margin:0 9px 8px 0; border-bottom: 6px solid black; border-top: 6px solid black; padding:8px; background-color:#FFF }	
+/*box piccolo destro 50% */
+div.cont_short_dx { float:left; width:367px; margin-bottom:8px; border-bottom: 6px solid black; border-top: 6px solid black; padding:8px; background-color:#FFF }
+/*---------box layout 2 colonne------*/
+/*box contenuto*/
+.cont_maindiv { float:left; width:565px; padding:8px; margin-bottom:8px; border-bottom: 6px solid black; border-top: 6px solid black; background-color:#FFF }
+	.cont_maindiv h1 { font: normal 16px Georgia, "Times New Roman", Times, serif }	
+/* img segnalazione tuo brano*/
+div.is-your-64 { background:transparent url(/gui/img/icon_mine_64.gif) no-repeat top right; height:64px; position:absolute; top:0; left:3px; width:64px; z-index:5; }
+div.is-your-126 { background:transparent url(/gui/img/icon_mine_126.png) no-repeat 0 0; height:14px; position:absolute; top:6px; left:95px; width:45px; z-index:5; }
+/* img segnalazione in your library */
+div.in-lib-64 { background: transparent url(/gui/img/icon_inlib_64.png) no-repeat bottom right; height:64px; position:absolute; bottom:-5px; left:3px; width:64px; z-index:10; }
+div.in-lib-126 { background: transparent url(/gui/img/icon_inlib_126.png) no-repeat bottom right; height:35px; position:absolute; top:106px; left:93px; width:49px; z-index:10; }
+.mineInlibPlayer { background: transparent url(/gui/img/icon_mine_inlib.png) no-repeat top left; height:134px; position:absolute; top:6px; left:92px; width:49px; z-index:10; }
+/*listone centrale  tipo search*/
+ul.cont_main { list-style:none; float:left; }
+	.cont_main li { float:left; width:565px; padding:8px; margin-bottom:8px; border-bottom: 6px solid black; border-top: 6px solid black; background-color:#FFF	}
+		.cont_main li.selected { background-color:#ccff00; }
+		.cont_main li img { float:left; margin-right:8px; }
+	.description { float:left; width:429px; height:64px; border-right:6px solid #000; margin: 0 8px 0 0; color:#000; display:inline; line-height:14px }
+	/*lista post-abuse-tag-loading*/
+	ul.post_abuse  { float:left; list-style:none; display:inline; margin: 9px 0 0 0; }
+		ul.post_abuse li { float:left; background-color:transparent; margin:0 13px 0 0; border:0; padding:0; width:auto; }
+			.loading {  /*float:left;*/ display:inline; /*margin-left:150px;*/ color:#000; border-bottom:none; }  
+						/*tooltip*/
+						.tagTooltip { float:left; display:inline; padding:0; clear:none; }
+							.tagTooltip dl dd { float:left; position: relative; margin:0; padding:0; border:0; background:none;} 
+							.tagTooltip dd dl { display: none; position:relative; }
+							.tagTooltip dd:hover dl { display: block; position: absolute; left:23px; top:16px; z-index:1; border-bottom:6px solid #000; border-top:6px solid #000; background-color:#000; width:230px; padding:0 8px; color:#fff!important }
+								.tagTooltip dd:hover dl ul { list-style:none; }
+									.tagTooltip dd:hover dl ul li { float:left; }
+										.tagTooltip dd:hover dl ul li a { float:left; margin-right:0.25em; }
+							.tagTooltip dd dl span { position:absolute; top:-16px; left:0; background: transparent url(../img/indice_tooltip_revert.png) no-repeat 0 0; width:220px; height:10px; }
+							/*nero user in library*/
+							.tagTooltipUser { float:left; display:inline; padding:0; clear:none; }
+							.tagTooltipUser dl dd { float:left; position: relative; margin:0; padding:0; border:0; background:none;} 
+							.tagTooltipUser dd dl { display: none; position:relative; }
+							.tagTooltipUser dd:hover dl { display: block;	position: absolute; left:44px; top:16px; z-index:1; border-top:6px solid #000; border-bottom:0; background-color:#000; width:160px; padding:0 8px; color:#fff!important } /*condizionale in ie7 library e search*/ 
+							.tagTooltipUser img { float:left; margin-right:8px; height:34px!important; width:34px!important; }
+								.tagTooltipUser dd:hover dl ul { list-style:none; }
+									.tagTooltipUser dd:hover dl ul li { float:left; }
+										.tagTooltipUser dd:hover dl ul li a { float:left; margin-right:0.25em; }
+							.tagTooltipUser dd dl span { position:absolute; top:-16px; left:0; background: transparent url(../img/indice_tooltip_revert.png) no-repeat 0 0; width:220px; height:10px; }
+						/*bianco tag*/
+						.tagTooltipBianco { float:left; display:inline; padding:0; clear:none; }
+							.tagTooltipBianco dl dd { float:left; position: relative; margin:0; padding:0; border:0; background:none;} 
+							.tagTooltipBianco dd dl { display: none; position:relative; }
+							.tagTooltipBianco dd:hover dl { display: block;	position: absolute; left:23px; top:16px; z-index:1; border-bottom:6px solid #fff; border-top:6px solid #fff; background-color:#fff; width:230px; padding:0 8px; color:#000!important }
+								.tagTooltipBianco dd:hover dl ul { list-style:none; }
+									.tagTooltipBianco dd:hover dl ul li { float:left; }
+										.tagTooltipBianco dd:hover dl ul li a { float:left; margin-right:0.25em; }
+							.tagTooltipBianco dd dl span { position:absolute; top:-16px; left:0; background: transparent url(../img/indice_tooltip_revert_b.png) no-repeat 0 0; width:220px; height:10px; }
+							/*bianco user in library*/
+							.tagTooltipBiancoUser { float:left; display:inline; padding:0; clear:none; }
+							.tagTooltipBiancoUser dl dd { float:left; position: relative; margin:0; padding:0; border:0; background:none;} 
+							.tagTooltipBiancoUser dd dl { display: none; position:relative; }
+							.tagTooltipBiancoUser dd:hover dl { display: block;	position: absolute; left:44px; top:16px; z-index:1; border-bottom:0; border-top:6px solid #fff; background-color:#fff; width:160px; padding:0 8px; color:#000!important } /*condizionale per ie7*/
+							.tagTooltipBiancoUser img { float:left; margin-right:8px; height:34px!important; width:34px!important; }
+								.tagTooltipBiancoUser dd:hover dl ul { list-style:none; }
+									.tagTooltipBiancoUser dd:hover dl ul li { float:left; }
+										.tagTooltipBiancoUser dd:hover dl ul li a { float:left; margin-right:0.25em; }
+							.tagTooltipBiancoUser dd dl span { position:absolute; top:-16px; left:0; background: transparent url(../img/indice_tooltip_revert_b.png) no-repeat 0 0; width:220px; height:10px; }
+	/*strumenti dx listone tipo search*/
+		/*menu tendina*/
+		div.tools { float:left; width:50px; height:64px; }
+		div.tools dl dd { float:left; position: relative; margin:0 0 2px 0; padding:0; border:0; width:50px; background:none; }
+		div.tools a { display: block; padding: 0; font: normal 12px Georgia, "Times New Roman", Times, serif; color:#888; text-decoration: none; background: transparent url(../img/circle_tooltip.png) no-repeat 5px 9px }
+				div.tools dd dl { display: none; position:relative; }
+					div.tools dd:hover dl { display: block; position: absolute; left:24px; top:-87px; z-index:1; width:80px; border-bottom:6px solid #000; border-top:6px solid #000; background:#fff }
+					/*icon buy*/
+					div.tools dd.duelink:hover dl { left:26px; top:-65px; }
+					div.tools dd dd { border-bottom: 1px dashed #888; width: 80px; margin:0; padding:0; } 
+					div.tools dd dl span { position:absolute; bottom:-16px; left:0; background: transparent url(../img/indice_tooltip.png) no-repeat 0 0; width:80px; height:10px } 
+					div.tools dd dd a { padding:5px 5px 5px 18px }
+					/* End tendina e tools search */
+/*playall*/
+div.playall { float:right; width:70px; text-align:left; margin-bottom:8px; border-bottom: 6px solid black; border-top: 6px solid black; padding:8px; background: #fff; }
+/*-----------------pagina player-----------------*/
+#player_container { float:left; margin-bottom:8px }
+	#loading_div { position:absolute; top:0; left:0; z-index:100; width:488px; height:175px; background: url(/gui/img/loading_player.gif) center center;}
+	#loading_list_div { text-align: center;}
+	#loading_list_div img { margin-top:60px; }
+	#oggetto_player { float:left; margin:0 8px 0 0; padding: 8px 8px 8px 8px; background-color:#000; width:472px; height:160px }
+		#oggetto_player img.imgAlbumPlayer { float:left; margin-right:8px; width:126px; height:126px; display:inline; }
+		#oggetto_player .boxdescription { float:left; width:338px; display:inline; color:#fff; font:normal 12px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif; line-height:14px }
+			#oggetto_player .boxdescription .post_abuse { margin: 9px 0 31px 0; float:left; list-style:none; display:inline }
+			#oggetto_player .boxdescription #player { height:28px; width:338px }
+			/*status bar*/
+				div#shareBar { float:right; margin:8px 0 0 0 }
+					div#shareBar ul { list-style:none; display:inline; float:right }
+						div#shareBar ul li { list-style-type: none; float:left; margin: 0 0 0 8px }
+								div#shareBar ul li a:hover { background:none; border-bottom:0; }
+	
+	/*tools player con e senza tooltip*/
+	div#tools_player { float:left; width:85px; margin:0; padding:0; border:none; }	
+		div#tools_player a, div#tools_player div a { float:left; display:block; width:38px; height:30px; margin:0 8px 8px 0; padding:8px 0 0 0; background: #fff url(../img/bg_icon_player.png) no-repeat bottom right; text-align:center }
+		/*destro*/
+		div#tools_player a.tlsDx { float:left; display:block; width:38px; height:30px; margin:0 0 8px 0; padding:8px 0 0 0; background: #fff url(../img/bg_icon_player.png) no-repeat bottom right; text-align:center; }
+			div#tools_player a:hover, div#tools_player a.tlsDx:hover  { background-color: #ccff00; border-bottom:0; }
+			/*no hover sul cuore inserito*/
+			div#tools_player a.nogreenhover:hover  { background-color:#fff; border-bottom:0; }	
+	/*icone con tooltip*/
+ 	div#tools_player div { float:left; margin:0 0 8px 0; padding:0; width:38px; height:38px; }
+	/*div#tools_player div a   definito sopra*/
+	div#tools_player div dl dd { float:left; position: relative; margin:0 0 2px 0; padding:0; border:0; width:70px; background:none; }
+				div#tools_player div dd dl { display: none; position:relative; }
+					div#tools_player div dd:hover dl { display: block; position: absolute; left:42px; top:-105px; z-index:9999; width:80px; border-bottom:6px solid #000; border-top:6px solid #000; background:#fff }
+					div#tools_player div dd#buyPlayer:hover dl { left:42px; top:-80px; }
+					div#tools_player div dd dd { border-bottom: 1px dashed #888; width: 80px; margin:0; padding:0 }
+					div#tools_player div dd dl span { position:absolute; bottom:-16px; left:0; background: transparent url(../img/indice_tooltip.png) no-repeat 0 0; width:80px; height:10px;}
+					div#tools_player div dl dd dl dd a { display: block; padding: 5px 5px 5px 18px;	margin:0; height:auto; width:57px; font: normal 12px Georgia, "Times New Roman", Times, serif; color:#888; text-decoration: none; background: transparent url(../img/circle_tooltip.png) no-repeat 5px 9px; text-align:left }
+					div#tools_player div dl dd dl dd a:hover { background-color:#ccff00; border-bottom:0; }
+	/*------------lista playabile-----------------*/
+	ul#playlist { float:left; margin-bottom:8px; border-bottom:6px solid #000; border-top:6px solid #000; list-style:none; display:inline; }
+		ul#playlist li { float:left; width:565px; height:33px; padding:0 8px 0 8px; border-bottom:1px dashed #888; background-color:#FFF; font:normal 12px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif; color:#000; display:inline; cursor:pointer; line-height:35px }
+			ul#playlist li.selected { background-color:#ccff00; }
+			ul#playlist li div {float:left; width:420px; }
+			ul#playlist li a img { float:right; display:inline; width:25px; height:25px; margin:4px 0 0 0; }
+			ul#playlist li span { float:left; display:inline; margin-right:27px; width:78px;  }
+			/*stato lista playabile brano bannato*/
+			ul#playlist li.banned { color:#6d6d6d!important; background-color:#e9e9e9 }
+	/*fine lista playabile*/ 
+	/*------------modifica elementi playlist-----------------*/
+	ol#playlist { float:left; margin-bottom:8px; list-style-type:decimal; }
+		ol#playlist li { float:left; list-style-position:inside; width:573px; padding-top:8px; padding-bottom:8px; border-top:1px dashed #888; background-color:#FFF;
+			font:normal 12px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif; color:#000 }
+			ol#playlist li.selected { background-color:#ccff00; }
+			ol#playlist li img { float:right; display:inline; margin-top:-22px; }
+			ol#playlist li span { float:right; display:inline; margin-top:-18px; margin-right:30px; }
+	/*fine modifica elementi playlist*/ 
+/*------------------------------------lanci colonna sx----------------------------------*/
+/*box lanciosx*/
+div.lancio_sx { float:left; width:186px; display:inline; padding:8px 0 0 0; margin-bottom:8px; border-bottom: 6px solid black; border-top: 6px solid black }
+	.mood, .situazione, .libero { background:#FFF }
+	div.lancio_sx h2{ float:left; display:inline; margin:0 8px 8px 8px; font: normal 16px Georgia, "Times New Roman", Times, serif; }
+	div.lancio_sx ul{ float:left; list-style:none; clear:both; border-top: 6px solid black; }
+		div.lancio_sx ul li { display:inline; color:#000; }
+			/*ie 7 in pagina search per no bold ma problema safari che raddoppia il bold anche lui*/
+			div.lancio_sx ul li a { display:block; padding-left:8px; width:178px; border-bottom:1px dashed #888; font: bold 15px Georgia, "Times New Roman", Times, serif; color:#000 }
+				div.lancio_sx ul li a span { text-decoration:none; color:#888; padding:0; font-weight:normal; }
+/*lanci con avatar*/
+	.containerlistAvatar { margin:8px auto 8px 0; width:178px; }
+	ul#listAvatar { float:left; display:inline; list-style:none; clear:both; width:170px; border-top:0; }	
+			ul#listAvatar li {float:left; display:inline; color:#000; margin: 0 8px 8px 0;  width:34px; height:34px; }
+				ul#listAvatar li a {  display:inline; float:left; border-bottom:none; width:inherit; position:relative; }
+					ul#listAvatar li a:hover { border-bottom:none; background:none; } 
+					 ul#listAvatar li a img {  border-bottom:none; float:left; }
+					ul#listAvatar li a:hover img {  background:none; border-bottom:6px solid #000;  }
+	span.desc { display:block; padding: 4px 0 4px 8px; } 
+			/*------------------------------------fine lanci colonna sx----------------------------------*/			
+/*---------box layout 2 colonne------*/
+/*----------------------------------------dashboard loggato ( + modifica profilo)---------------------------------*/
+/*immagine avatar per il caricamento*/
+#containerAvatarDashboard { float:left; display:inline; width:131px }
+	.avatar { float:left; margin-right:5px; border-bottom: 6px solid #000; margin-top:2px }
+		.avatarnoborder { float:left; margin-right:5px; margin-top:2px }
+#containerProfileDashboard { float:right; display:inline; width:425px }
+	.txtUsername { color:#000; font-size:16px; font-weight:bold; text-transform:uppercase; overflow:hidden }
+/*.momentsDashboard { float:left; width:581px; padding:0; margin-bottom:8px; border-bottom: 6px solid black; border-top: 6px solid black; background-color:#FFF }*/
+	h2.titleMoment { font: normal 24px Georgia, "Times New Roman", Times, serif; text-transform:lowercase; color:#888; margin:0; padding:0; }
+		.moments { float:left; display:block; border-bottom:1px dashed #888; padding:4px 0; width:100%; }
+/*TAGCLOUD*/
+.divTagCloud { float:left; width:565px; padding:8px; margin-bottom:8px; background-color:#000; }	
+	.TagCloud { float:left; list-style:none; width:100%; display:inline; text-align:justify } 	
+		.TagCloud li { display:inline; white-space:nowrap; }		
+			 .TagCloud a { float:left; display:inline; line-height: 48px; height:48px; margin-right:0.75em; white-space:nowrap }		
+				.TagCloud a:hover { border-bottom:0; height:48px; }									
+			.tag-type-activity { font-family: "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif; text-transform:uppercase; }
+			.tag-type-mood { font-family: Georgia, "Times New Roman", Times, serif; text-transform:lowercase; }
+				.tag-dimension-6 { font-size:250%; color:#fff; }
+				.tag-dimension-5 { font-size:225%; color:#b2b2b2; }
+				.tag-dimension-4 { font-size:200%; color:#8f8f8f; }
+				.tag-dimension-3 { font-size:175%; color:#5f5f5f; }
+				.tag-dimension-2 { font-size:150%; color:#404040; }
+				.tag-dimension-1 { font-size:125%; color:#2f2f2f; }			
+/*tooltip tag tag cloud*/				
+	ul.TagCloudtooltip { float:left; list-style:none; width:100%; text-align:justify; padding:2px 0; } 
+		ul.TagCloudtooltip li { display:inline; }
+			ul.TagCloudtooltip li a { float:left; display:inline; line-height: 20px; height:20px; font-size:12px; font-weight:bold; white-space:nowrap; }
+			ul.TagCloudtooltip li a:hover { height:20px; border-bottom:0; }
+			ul.TagCloudtooltip li a.tag-type-mood { font-family: Georgia, "Times New Roman", Times, serif; text-transform:lowercase; line-height:18px; }
+				ul.TagCloudtooltip li a.tag-dimension-6 { color:#b6b6b6; }
+				ul.TagCloudtooltip li a.tag-dimension-5 { color:#b2b2b2; }
+				ul.TagCloudtooltip li a.tag-dimension-4 { color:#8f8f8f; }
+				ul.TagCloudtooltip li a.tag-dimension-3 { color:#5f5f5f; }
+				ul.TagCloudtooltip li a.tag-dimension-2 { color:#404040; }
+				ul.TagCloudtooltip li a.tag-dimension-1 { color:#2f2f2f; }
+/*menu col dx dashboard playlist*/
+div.menuDashboard ul { float:left; list-style:none; clear:both; }
+		div.menuDashboard ul li { display:block; background-color:#FFF; width:186px; margin-bottom:6px; border-top: 6px solid #000; border-bottom: 6px solid #000; }
+ 		div.menuDashboard ul li a { display:block; font: bold 16px Georgia, "Times New Roman", Times, serif; padding:8px; color:#000; }
+			div.menuDashboard ul li a:hover  { border-bottom:0; background-color:#ccff00; }
+				div.menuDashboard ul li a.selected  { border-bottom:0; background-color:#ccff00; cursor:default; }
+/*fine menu col dx dashboard playlist*/
+/*--------------------fine box layout---------------------*/
+/*-------------------------------------------fine elementi layout---------------------------------*/
+/*---------------------------------form------------------------*/
+form { float:left; }
+	form fieldset { border:none; float:left; margin-top:-5px; }	
+	/*per ie 7 dovunque c' un legend
+	form legend { float:left; font-size:24px; font-weight:normal; color:#888; padding:0; margin:0; text-indent:-3px; }*/
+		form legend { float:left; font-size:24px; font-weight:normal; color:#888; padding:0; margin:0; }
+		form label { float:left; clear:both; font:normal 12px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif; margin-bottom:-1px; text-transform:lowercase }
+		form input { float:left; clear:left; height:18px; padding-top:2px; border-left:none; border-top:1px solid #888; border-bottom:1px solid #888; border-right:1px solid #888; color:#888; font:normal 12px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif; text-transform:lowercase }
+		form select { float:left; height:20px; border-left:none;  border-top:1px solid #888; border-bottom:1px solid #888; border-right:1px solid #888; color:#888; text-transform:lowercase }
+		form label.label_float { position:relative; width:150px; top:-19px; left:130px; text-transform:lowercase }
+		div.cont_short_sx form select, div.cont_short_dx form select { float:left; margin-top:8px; width:300px; border-color:#888; text-transform:lowercase }
+		form a.submit { float: left; width: 15px; height: 27px; margin:-2px 0 0 4px; border: none; background: #fff url(../img/button_submit.gif) no-repeat 0 0; cursor: pointer; text-indent:-5000px }
+			form a.submit:hover { background: #fff url(../img/button_submit.gif) no-repeat 0 -37px; border-bottom:0; }
+/*checkbox style*/	 
+form#login input.checkbox_style, form input.checkbox_style, form#join input.checkbox_style, form#change-settings input.checkbox_style, form#register input.checkbox_style  { float:left; border:none; width:14px; margin:0 8px 0 0 }
+/*---------form search-----------*/	
+form#search { float:left; margin:20px 0 0 6px; }	
+/*stato iniziale*/
+	/*questo controlla l'input type text iniziale*/
+	form#search #stato_iniziale { width:140px; height:18px; margin-right:8px; padding:0; background: url(../img/1x1.gif) repeat 0 0; border-top:1px solid #fff; border-bottom:1px solid #fff; border-right:1px solid #fff; font:normal 16px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif; color:#FFF; }
+	form#search a { font: normal 12px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif; color:#FFF; text-decoration:none; line-height:14px }
+		 form#search a:hover, form#search a.black:hover { color:#000 }
+		 /*black*/
+		form#search #stato_iniziale.black { width:140px; height:18px; margin-right:8px; padding:0; background: url(../img/1x1.gif) repeat 0 0; border-left:none; border-right:1px solid #000; border-top:1px solid #000; border-bottom:1px solid #000; font:normal 16px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif; color:#FFF }
+		form#search a.black { font: normal 12px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif; color:#000; text-decoration:none; line-height:14px }
+/*stato onclick*/
+#modulo_search { float:left; position:relative; width:276px; margin-top:-14px; border-bottom: 6px solid black; border-top: 6px solid black; background-color:#FFF;padding:8px 8px 4px 8px }
+	#modulo_search select { float:left; width:100px; height:20px; margin-right:7px; border-left:none; border-right:1px solid #888; border-top:1px solid #888; border-bottom:1px solid #888; color:#888 }
+	/*questo controlla l'input type text concatenato alla ricerca nel sito*/
+	form#search input { float:left; width:140px; height:18px; margin-right:7px; border-left:none; border-right:1px solid #888; border-top:1px solid #888; border-bottom:1px solid #888; color:#888 }
+	a#modulo_search_close { position:absolute; display:block; top:-37px; right:0; font:normal 12px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif; color:#FFF;text-decoration:none }
+		a#modulo_search_close:hover {  color:#000; }
+/*modulo ricerca senza risultati*/
+form#search_form_no_res { margin:10px 0;}
+form#search_form_no_res #modulo_search_type_no_res { float:left; width:100px; height:20px; margin-right:7px; border-left:none; border-right:1px solid #888; border-top:1px solid #888; border-bottom:1px solid #888; color:#888 }
+/*---------fine form search-------*/
+/*---------form open id-----------*/
+form#openid input { float:left; clear:left; width:320px; background: #fff url(../img/bg_openid.gif) no-repeat 0 -1px; padding-left: 25px }	
+/*-------fine form open id--------*/
+/*---------form login-----------*/
+form#login div#login_sx { float:left; clear:left; display:inline; width:176px }
+form#login div#login_dx { float:left; display:inline; width:188px }
+	form#login input { width:168px }
+	form#login a.submit_login { float: right; width: 15px; height: 28px; margin-top:-2px; border: none; background: #fff url(../img/button_submit.gif) no-repeat 0 0; cursor: pointer; text-indent:-5000px }
+	form#login a.submit_login:hover { background: #fff url(../img/button_submit.gif) no-repeat 0 -37px; border-bottom:0; }
+/*-------fine form open id--------*/
+/*---------form join (registrazione)  -  form change-settings (modifica account)-----------*/
+form#join input, form#register input,form#register select, form#change-settings input, form#change-password input, form#addrec input, form#create-profile input, form#delete-account input, #feedback_form, form#apps input { width:342px }
+/*form#join #div_required, form#change-settings #div_required, form#change-password #div_required, form#addrec #div_required, form#delete-account #div_required */
+#div_required { float:left; width:60px; font:12px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif }
+/*-------fine form open id--------*/
+/* click to join (box che linka alla registrazione)*/
+#click_to_join { float:left; width:650px; font:12px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif; }
+.subtitle { float:left; width:500px; font:12px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif; }
+/*submit div click to join e modifica account e opwwd*/
+a.linkSubmitReq { display:block; float:right; margin-left:230px; margin-top:-6px; width:50px; padding-right:20px; background: #fff url(../img/button_submit.gif) no-repeat right 2px; height:30px; cursor: pointer; text-align:right; color:#888; font:normal 24px Georgia, "Times New Roman", Times, serif }
+	a.linkSubmit { display:block; float:right; width:auto; padding-right:20px; background: #fff url(../img/button_submit.gif) no-repeat right 2px; height:30px; cursor: pointer; text-align:right; color:#888; font:normal 24px Georgia, "Times New Roman", Times, serif }
+a.linkSubmit:hover, a.linkSubmitReq:hover  { background: #fff url(../img/button_submit.gif) no-repeat right -36px; border-bottom:0; color:#888; }
+/*fine submit div click to join e modifica account e opwwd*/
+textarea#mood_phrase { float:left; width:342px; padding:2px 0 0 0; height:18px; border:1px solid #888; color:#888; border-left:0; font:normal 12px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif; height:auto; overflow:auto; }
+textarea#message { float:left; width:342px; padding:2px 0 0 0; height:63px; border:1px solid #888; color:#888; border-left:0; font:normal 12px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif; overflow:auto; }
+textarea.code { float:left; width:650px; padding:2px 0 0 0; height:63px; border:1px solid #888; color:#000; border-left:0; font:normal 10px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif; overflow:auto; }
+textarea.button { float:left; width:535px; padding:2px 0 0 0; height:45px; border:1px solid #888; color:#000; border-left:0; font:normal 10px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif; overflow:auto; }
+textarea#moments { float:right; width:342px; padding:2px 0 2px 0; margin-top:6px; height:63px; border:1px solid #888; border-left:0; color:#888; overflow:auto; }
+textarea.editPlaylist { float:left; width:300px; margin-right:5px; padding:2px 0 2px 0; height:18px; border:1px solid #888; border-left:0; color:#888; font:normal 12px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif; overflow:hidden; }
+.numberTxt {font:normal 24px Georgia, "Times New Roman", Times, serif; margin-top:-3px; float:left;}
+#moments-container {clear:both; float:left; }
+#lnkSave {line-height:26px;}
+/*social*/
+form#socialNetworks input#flickr { float:left; clear:left; width:317px; background: #fff url(../img/icon_flickr.jpg) no-repeat 0 0; padding-left: 25px }
+form#socialNetworks input#facebook { float:left; clear:left; width:317px; background: #fff url(../img/icon_facebook.jpg) no-repeat 0 0; padding-left: 25px }
+form#socialNetworks input#twitter { float:left; clear:left; width:317px; background: #fff url(../img/icon_twitter.jpg) no-repeat 0 0; padding-left: 25px }
+form#socialNetworks input#Myspace { float:left; clear:left; width:317px; background: #fff url(../img/icon_myspace.jpg) no-repeat 0 0; padding-left: 25px }
+form#socialNetworks input#friendfeed { float:left; clear:left; width:317px; background: #fff url(../img/icon_friendfeed.jpg) no-repeat 0 0; padding-left: 25px }
+/*-----------------------------fine form-----------------------------*/
+.gototop{
+background:url(../img/icon_gototop.gif) no-repeat 0 0; width:38px; height:38px; display:block; _display:none; position:fixed; z-index:9999; text-indent:-9999px; overflow:hidden; outline:none; left:793px; bottom:41px }
+#bgLabel { position:fixed; bottom:0; left:793px; width:200px; background:transparent url(../img/bgLabel.png) no-repeat 0 0; text-align:center; margin:0 auto }
+	#textbgLabel { padding:4px 2px; text-align:center; margin:0 auto }
+/*----------------------------- modali lightwindow in pagine non in iframe-----------------------------*/
+#lightwindow_contents h1 { font:normal 12px 'Trebuchet Ms', Verdana, Arial, Helvetica, sans-serif; color:#000; }
+#lightwindow_contents a { font:normal 12px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif; color:#000; text-decoration:none; }
+#lightwindow_contents a img {border: none;}
+#lightwindow_contents .immagineModale {text-align:center; margin:0 auto}
+#lightwindow_contents .immagineModale a { 
+			display:block;
+			float: right;
+			width:25px;
+			padding-right:20px;
+			background: #ccff00 url(../img/button_submit.png) no-repeat right 0 !important; 
+			cursor: pointer;
+			text-align:left;
+			text-indent:-5px;
+			font:normal 24px Georgia, "Times New Roman", Times, serif !important;
+			color:#000;
+			text-decoration:none;
+			margin-top:-5px;
+	}
+#lightwindow_contents .immagineModale a:hover  { border-bottom:0; text-decoration:underline; }
+/*----------------------------- fine modali lightwindow -----------------------------*/
+
+
+/********************************************* add *************/
+h2.noresults { font: normal 24px Georgia, "Times New Roman", Times, serif; text-transform:none; color:#888; margin:0; padding:0; }
+#sponsorLink { position:absolute; top:131px; /*top:256px;*/ left:793px; z-index:2 }
+#donate { position:absolute; top:381px; /*top:506px;*/ left:793px; width:200px; height:26px }
+a.linkOntourimg { 
+	background: url(../img/icon_gigjunkies.png) no-repeat 0 0; 
+	display:block;
+	float:left;
+	width:22px;
+	height:22px;
+	margin:8px 6px 0 0;
+ }
+	a.linkOntourimg:hover { background-position: 0 -22px }	
+	a.linkOntourimgHover { background-position: 0 -22px }
+a.linkOntour { 
+	color:#888;
+	display:block;
+	float:left;
+	height:13px;
+	margin:13px 0 0 0;
+	line-height:12px
+	}
+	a.linkOntour:hover { color:#000 }	
+a.linkOntourHover { color:#000; background-color:#ccff00; border-bottom:1px solid #000; }
+#urbanproofenergised { display:none }
+
+	

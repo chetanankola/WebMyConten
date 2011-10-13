@@ -1,0 +1,128 @@
+<html>
+ 
+<!-- PLEASE CHECK LEFTPANEL.PHP it has all the stuff.. since... its not possible to rememeber javascript var here -->
+	  <div id="photos" style='border:20px solid #ccc;display:block;min-width:500px; min-height:500px'>
+		<!-- here tag has been moved to footer_template.php-->    
+		
+	  </div>
+	 
+<!--	 <div id="here" style='position:relative;'>
+	 </div>
+-->
+	 
+	 
+	  
+	 <!-- NEXT and SEARCH PANEL -->
+	 <div id='shownext' style='display:none;'>
+		  <a href=#  onclick='nextresults();blahblah();'> next</a><br>
+	 </div>	
+          	  
+<script type="text/javascript">
+		var limit = 2; //number of photos
+		var offset = 0; //start position
+		
+		//for JQUERY
+	        $(document).ready(function()
+	        {
+			
+					//$('#shownext').addClass('likeabutton');
+			
+	        });
+		
+function clearmiddleifsearchempty()
+{
+		    if($('#search').val()=='')
+		    {
+		
+				$('#middle').hide();
+				$('#internalnext').hide();
+				$('#shownext').hide();
+				$('#photos').hide();
+		    }
+	}	
+		function nextresults() //onkeyup in searchbox .. this is called.
+		{ 
+		   document.getElementById("photos").innerHTML=""; 
+		}
+		function clearpics()
+		{
+		    limit =2;
+		    offset=0;
+		    if($('#search').val()=='')
+		    {
+				$('#middle').hide();
+				$('#internalnext').hide();
+				$('#shownext').hide();
+				$('#photos').hide();
+		    }
+		    else
+		    {      
+				$('#internalnext').show();
+				$('#middle').show();
+				$('#shownext').show();
+				$('#photos').show();
+		    }
+		}//end of function clearpic
+		
+		function blahblah() {
+
+		  var searchtags=document.getElementById("search").value;
+		  //create an instance of YUI, the yui module is needed for Y.Lang.type method
+		  YUI().use('gallery-yql','node','yui',function(Y) { 
+			var loadInProgress = false; //if photos are currently loading
+			var loadLink = Y.one('#load'); //get a node instance of the load link
+			//function to find images from flickr and append them to the page
+			function loadImages()	{
+				  var querystr = 'select * from flickr.photos.search ('+offset+','+limit+') where tags="'+searchtags+'" and tag_mode="all"';
+				  var q1 = new Y.yql(querystr);
+				  
+				  //on a successfull query
+				  
+				  q1.on('query',function(r){
+					  var results = r.results.photo;
+					  var debugresult = results.length;
+					  alert(results.length);
+					  var count = 0;
+					  while (count < results.length && count < 1) {
+						  var farm = results[count].farm;
+						  var server = results[count].server;
+						  var id = results[count].id;
+						  var secret = results[count].secret;
+						  var title = results[count].title;
+						  var owner = results[count].owner;
+						  var imgwidth = results[count].width;
+						  var imgheight= results[count].height;
+						  var img = "http://farm"+farm+".static.flickr.com/"+server+"/"+id+"_"+secret+".jpg";
+						  var link = "http://www.flickr.com/photos/"+owner+"/"+id;
+						  //check to see if this photo is already on the page, if not append it 
+						  if (Y.Lang.type(Y.one('#img'+id)) == 'null') {
+							  //document.getElementById("photos").innerHTML="";
+							  //Y.one('#photos').append('<a href="'+link+'" target="_blank"><img src="'+img+'" alt="'+title+'" id="img'+id+'" /></a>');
+							 var imagestr = '<a href="'+link+'" target="_blank"><img src="'+img+'" width=100% align="center" alt="'+title+'" id="img'+id+'" /></a>'
+							 alert(imagestr);
+							 $(imagestr).hide().appendTo("#photos").fadeIn();   
+						  }
+						  count++;
+						 // $('#photos').width(imgwidth);
+						 // $('#photos').height(imgheight);    
+					  }
+					 // Y.one('#photos').append('<br />');
+					  offset = offset + 1;
+					  loadInProgress = false;
+				  });
+				  //on an error
+				  q1.on('error',function(r){
+					  Y.log(r.description); //show the result in firebug
+					  loadInProgress = false;
+				  });
+			  }//end of loadimages() function
+		
+		loadImages();	//call loadimages
+		  }); // end of YUI.use     
+		 
+		var noresult = '<h1 style="font-size:30px;color:#ccc;"> MEH!!! NEED API KEY FOR YQL TO RUN!!! </h1>	';
+		document.getElementById("photos").innerHTML=noresult; 
+
+	} //end of blahblah
+</script>
+

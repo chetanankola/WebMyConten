@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "ankola"
+AuthUserFile /usr/local/var/www/html/.htpasses
+require valid-user

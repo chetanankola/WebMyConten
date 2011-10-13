@@ -1,0 +1,87 @@
+[25-May-2011 03:47:19] PHP Warning:  require_once(animal.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/chetanan/public_html/homepage/php/header.php on line 2
+[25-May-2011 03:47:19] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'animal.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/chetanan/public_html/homepage/php/header.php on line 2
+[25-May-2011 20:40:43] PHP Warning:  include(./homepage/php/header.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/chetanan/public_html/homepage/php/myyui.php on line 43
+[25-May-2011 20:40:43] PHP Warning:  include(./homepage/php/header.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/chetanan/public_html/homepage/php/myyui.php on line 43
+[25-May-2011 20:40:43] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening './homepage/php/header.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/chetanan/public_html/homepage/php/myyui.php on line 43
+[25-May-2011 20:41:30] PHP Warning:  include(./homepage/php/header.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/chetanan/public_html/homepage/php/myyui.php on line 43
+[25-May-2011 20:41:30] PHP Warning:  include(./homepage/php/header.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/chetanan/public_html/homepage/php/myyui.php on line 43
+[25-May-2011 20:41:30] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening './homepage/php/header.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/chetanan/public_html/homepage/php/myyui.php on line 43
+[25-May-2011 20:41:44] PHP Warning:  include(./homepage/php/header.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/chetanan/public_html/homepage/php/myyui.php on line 43
+[25-May-2011 20:41:44] PHP Warning:  include(./homepage/php/header.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/chetanan/public_html/homepage/php/myyui.php on line 43
+[25-May-2011 20:41:44] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening './homepage/php/header.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/chetanan/public_html/homepage/php/myyui.php on line 43
+[25-May-2011 20:42:21] PHP Warning:  include(./homepage/php/header.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/chetanan/public_html/homepage/php/myyui.php on line 43
+[25-May-2011 20:42:21] PHP Warning:  include(./homepage/php/header.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/chetanan/public_html/homepage/php/myyui.php on line 43
+[25-May-2011 20:42:21] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening './homepage/php/header.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/chetanan/public_html/homepage/php/myyui.php on line 43
+[25-May-2011 20:43:28] PHP Warning:  include(./homepage/php/header.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/chetanan/public_html/homepage/php/myyui.php on line 43
+[25-May-2011 20:43:28] PHP Warning:  include(./homepage/php/header.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/chetanan/public_html/homepage/php/myyui.php on line 43
+[25-May-2011 20:43:28] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening './homepage/php/header.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/chetanan/public_html/homepage/php/myyui.php on line 43
+[25-May-2011 21:29:33] PHP Warning:  include(../leftpanel.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/chetanan/public_html/homepage/php/index.php on line 59
+[25-May-2011 21:29:33] PHP Warning:  include(../leftpanel.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/chetanan/public_html/homepage/php/index.php on line 59
+[25-May-2011 21:29:33] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening '../leftpanel.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/chetanan/public_html/homepage/php/index.php on line 59
+[25-May-2011 21:29:33] PHP Warning:  include(../banner.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/chetanan/public_html/homepage/php/index.php on line 68
+[25-May-2011 21:29:33] PHP Warning:  include(../banner.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/chetanan/public_html/homepage/php/index.php on line 68
+[25-May-2011 21:29:33] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening '../banner.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/chetanan/public_html/homepage/php/index.php on line 68
+[25-May-2011 21:29:33] PHP Warning:  include(../pane.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/chetanan/public_html/homepage/php/index.php on line 79
+[25-May-2011 21:29:33] PHP Warning:  include(../pane.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/chetanan/public_html/homepage/php/index.php on line 79
+[25-May-2011 21:29:33] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening '../pane.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/chetanan/public_html/homepage/php/index.php on line 79
+[25-May-2011 21:29:37] PHP Warning:  include(../leftpanel.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/chetanan/public_html/homepage/php/index.php on line 59
+[25-May-2011 21:29:37] PHP Warning:  include(../leftpanel.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/chetanan/public_html/homepage/php/index.php on line 59
+[25-May-2011 21:29:37] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening '../leftpanel.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/chetanan/public_html/homepage/php/index.php on line 59
+[25-May-2011 21:29:37] PHP Warning:  include(../banner.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/chetanan/public_html/homepage/php/index.php on line 68
+[25-May-2011 21:29:37] PHP Warning:  include(../banner.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/chetanan/public_html/homepage/php/index.php on line 68
+[25-May-2011 21:29:37] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening '../banner.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/chetanan/public_html/homepage/php/index.php on line 68
+[25-May-2011 21:29:37] PHP Warning:  include(../pane.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/chetanan/public_html/homepage/php/index.php on line 79
+[25-May-2011 21:29:37] PHP Warning:  include(../pane.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/chetanan/public_html/homepage/php/index.php on line 79
+[25-May-2011 21:29:37] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening '../pane.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/chetanan/public_html/homepage/php/index.php on line 79
+[27-May-2011 04:10:27] PHP Warning:  require_once(class.compressor.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/chetanan/public_html/homepage/php/rmove.php on line 3
+[27-May-2011 04:10:27] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'class.compressor.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/chetanan/public_html/homepage/php/rmove.php on line 3
+[31-May-2011 02:42:42] PHP Warning:  include(./homepage/php/rightpanel.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/chetanan/public_html/homepage/php/rmove.php on line 34
+[31-May-2011 02:42:42] PHP Warning:  include(./homepage/php/rightpanel.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/chetanan/public_html/homepage/php/rmove.php on line 34
+[31-May-2011 02:42:42] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening './homepage/php/rightpanel.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/chetanan/public_html/homepage/php/rmove.php on line 34
+[31-May-2011 02:43:16] PHP Warning:  include(/homepage/php/rightpanel.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/chetanan/public_html/homepage/php/rmove.php on line 34
+[31-May-2011 02:43:16] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening '/homepage/php/rightpanel.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/chetanan/public_html/homepage/php/rmove.php on line 34
+[06-Jun-2011 01:44:56] PHP Parse error:  syntax error, unexpected '=' in /home/chetanan/public_html/homepage/php/test.php on line 16
+[01-Sep-2011 18:24:04] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[01-Sep-2011 18:24:04] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[04-Sep-2011 06:13:31] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[04-Sep-2011 06:13:31] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[08-Sep-2011 18:47:23] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[08-Sep-2011 18:47:23] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[20-Sep-2011 16:57:25] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[20-Sep-2011 16:57:25] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[20-Sep-2011 16:58:16] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[20-Sep-2011 16:58:16] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[20-Sep-2011 16:58:52] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[20-Sep-2011 16:58:52] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[20-Sep-2011 16:59:44] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[20-Sep-2011 16:59:44] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[20-Sep-2011 17:02:06] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[20-Sep-2011 17:02:06] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[20-Sep-2011 17:51:34] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[20-Sep-2011 17:51:34] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[20-Sep-2011 17:51:41] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[20-Sep-2011 17:51:41] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[21-Sep-2011 02:34:58] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[21-Sep-2011 02:34:58] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[21-Sep-2011 02:35:14] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[21-Sep-2011 02:35:14] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[21-Sep-2011 02:35:42] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[21-Sep-2011 02:35:42] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[21-Sep-2011 02:35:51] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[21-Sep-2011 02:35:51] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[21-Sep-2011 09:47:06] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[21-Sep-2011 09:47:06] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[22-Sep-2011 05:56:51] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[22-Sep-2011 05:56:51] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[23-Sep-2011 10:58:56] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[23-Sep-2011 10:58:56] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[24-Sep-2011 06:29:13] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[24-Sep-2011 06:29:13] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[30-Sep-2011 14:48:37] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[30-Sep-2011 14:48:37] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[01-Oct-2011 11:34:49] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[01-Oct-2011 11:34:49] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[08-Oct-2011 16:24:31] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[08-Oct-2011 16:24:31] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[12-Oct-2011 01:18:43] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[12-Oct-2011 01:18:43] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0

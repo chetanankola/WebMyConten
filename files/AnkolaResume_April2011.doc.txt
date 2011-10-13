@@ -1,0 +1,101 @@
+﻿CHETAN ANKOLA
+2707 Portland street, Apt 209, Los Angeles, CA 90007    -    chetan.ankola@gmail.com / ankola@usc.edu 732-668-5607
+Graduate Student 2012, University of Southern California, Computer Science.  
+Objective:
+Seeking a position as a summer Intern, in a field that will constantly challenge my thinking to develop and design 
+softwares that are novel yet simple to use and optimal in performance.
+Professional Summary: 
+1. 2 years of professional experience as Research and Development Engineer in wireless communication at Nokia Siemens Networks, Bangalore.
+2. About a year of experience designing and developing web applications- social networking applications, xml based applications and designing web pages in PHP/HTML/AJAX (CMS-XOOPS) during Internship at Cisco.
+3. Extensively worked on Design and Specification work related to WCDMA, WiMAX and LTE in Wireless Communication.
+4. Over 2 years of experience in object oriented analysis, design and programming (OOA/OOD/OOP) (JAVA AND C++) & Unified Modeling Language (UML), Web Design and Development, Test Automation and Hardware testing (in wireless communications).
+5. Effectively worked in various positions like Project Lead, Software Developer, Web Developer and Software Tester, based on project requirements.
+6. Have experience with web 2.0 and web services - PHP, MySQL, JavaScript, DOM, AJAX, SOAP, JSON XML, XSLT, HTML/DHTML, CSS, AJAX, JSP, FLASH. 
+7. Have expertise on Content management systems: XOOPS, Joomla, Drupal and PINT.
+8. Expertise in C/C++ (STL), Java, Perl, Python, Matlab, Unix shell scripting, TCL
+9. Worked in Unix, Windows, Mac-OS environments and well versed with UNIX system programming and assembly programming.
+Technical Skills        
+1. Languages – C/C++, Python, Matlab, PHP, J2EE ( JSP, Servlets, JDBC), JAVA, SQL, CGI, XML, XSLT, HTML/DHTML, Java Script, DOM, JSON, SOAP, AJAX, FLASH, Perl, Unix Shell scripting (ksh, csh, sed, awk),TCL, Assembly language.
+2. Databases – Oracle, MySQL 5.5
+3. OS – UNIX, Win 2x/NT 4.0/XP/ 7, MAC
+4. Frameworks/tools/CMS– JDK, HUDSON (CI), Cruise Control (CI), XOOPS, DRUPAL, JOOMLA
+5. Authentication Servers – LDAP.
+6. IDE – Eclipse, Netbeans, Code Composer Studio.
+7. Application & Web Servers- Tomcat 5.x, Apache, MAC OS-X Snow Leopard Server, WebDAV.
+8. Webservices - REST
+9. Version Control – CVS, ClearCase, Subversion, Dimensions.
+10. Object Oriented Design Tools: UML (Rational Rose, Rhapsody), MVC – design pattern
+Current Education:
+Graduate Student Fall 2012 (University of Southern California)
+Major: Masters of Science in Computer Science
+Courses for fall 2010: Operating Systems(Nachos), Computer Vision(Segmentation/Stereo-Analysis/Recognition)
+Courses for spring 2011: Multimedia Systems, Web Technologies, Artificial Intelligence.
+Projects:
+1. Operating System: 
+1. Designed and completed an Incomplete Operating System called “NACHOS” , adding new features like multi-processing, multi-threading, Virtual memory, PageTables, System calls, Remote Procedure Calls(RPC), Centralized Server approach for RPC, Fully Distributed Server approach for RPC.
+2. Simulated a fully functional restaurant (Carls Junior) as a user program run on the above designed operating system, by creating multiple threads and processes and using RPC/systemcalls guaranteeing mutual exclusion using Locks, Condition variables and Monitors on Centralized server and fully distributed mechanism. 
+1. Computer Vision: 
+1. Implemented Object Recognition in OpenCV, using “Bag of Features” method, PCA-Sift Feature and KNN method.
+2. Implemented Stereo matching technique for images taken from camera  at different views
+3. Implemented Image segmentation methods like K-Means-Clustering and Mean Shift Segmentation
+4. Structure from motion: Computing a Euclidean upgrade, given an affine reconstruction from two images with uncalibrated cameras.
+1. Aritificial Intelligence:
+1. Developed an Intelligent Agent that searches for optimal path for joining wires on a circuit board, using A*, Uniform cost search and BFS/DFS with a self designed heuristics function for A*, that searches the optimal path by expanding lesser nodes (C++)
+1. Multimedia Systems:
+1. Develeped a software that performs subsampling of an image on YUV space, and upsamples it using an interpolation algorithm.
+2. Developed a software that performs compression of images using vector quantization on an RGB space for an image with a codebook, that is created using the color distribution information(3d histogram)
+1. Web Technologies:
+1. Have done simple projects on HTML, CSS, javascript/DOM for xml-parsing and  Perl/CGI scripting for handling backend.
+Current GPA: 3.35/4.0
+Professional Work Experience:
+Website maintenance – Sonny Astani Department of Civil and Environmental Engineering, University of Southern California [August 2010 – Current] 
+Job role:  
+1. Maintain website of CEE department using CMS – Pint.
+2. Organize seminars (video tape, archive)  for Faculty candidates using Webex.
+3. Administration of personal server (Snow Leopard MACOS-X) for the chair of CEE department.
+Nokia Siemens Networks, Bangalore, India. [July 2008 – July 2010] 
+Research and Development Engineer
+1. Worked on WiMAX 3.5G-Worldwide Interoperability for Microwave Access architectures and specifications area. 
+a. Designed, developed and tested a simulation project for WiMAX creating a server with a simple scheduler serving 2 clients adhering to IEEE 802.16e using C language 
+b. Wrote an advanced Scheduler Module for the server as an extension feature for simulation project. 
+1. Developed CORE - WiMAX  modules (language C++) in MAC layer which includes 
+1. SUB-MAPS (SUB FRAME OF THE ACTUAL WIMAX 5 ms Frame sent in AIR)
+2. Features related to QUALITY OF SERVICE – SERVICE FLOWS etc.
+1. Worked on W-CDMA 3G-Wide Band Code Division Multiple Access architectures and specifications area. 
+1. Designed and developed a module called SPECTRALLY EFFICIENT LINK ADAPTATION (SELA) for the Multiple Input Multiple Output [MIMO] antenna feature of WCDMA in C. [SELA is a component in WCDMA which does the task of efficiently allocating resources like Power, CDMA CODES, and Transport Block to UE(mobiles) for DATA QUEUES selected by the Scheduler using Water filling algorithm and considering many other factors like channel conditions  - CQI etc]
+2. Designed a PHY-SIMULATOR for MAC layer in High Speed Uplink Packet Access using Python.
+3. Automated On-Board Target Testing for High Speed Downlink Packet Access [HSDPA] in WCDMA using Python.
+1. Worked on LTE –Long Term Evolution 4G architectures and specifications area. 
+            Optimizations and performance related issues[C++]
+Cisco Systems. Internship [2008]:
+Project FUSION
+Role: Designer and team lead.(3 member team)
+A Cisco Web based project and a tool for social networking, dynamic test plan generation, automated execution of test scripts on the test hardware and a simplified bug-reporting mechanism for Testers, developers and line Managers. The project was part of the internship project during under graduation. 
+Features and Components Developed for project FUSION
+1. Social networking site for Cisco intranet using Content Management 
+2.      System   called XOOPS [object oriented PHP 5.0, mySQL, XAJAX, SOAP.
+3. Integration of intranet chat application to the web interface of FUSION
+4. Dynamic test-plan generation with custom specified format by user and stored as database for easy querying.
+5. Creation of Dynamic xml parser for converting Testplan documents into xml format
+6. LDAP authentication 
+7. Test scripts execution on Cisco routers from FUSION Web interface (by connecting to Cisco Internal servers).
+8. RSS feed  to enable regular updates on ideas, test plan change
+Under graduation 
+Bachelor of Engineering, Vishwesvariah Technological University, India (People’s Education Society Institute of Technology) -2008
+Aggregate Percentage: 75 (3.8 GPA)
+Projects:
+        Developed an Online Auction System [HTML,PHP,Javascript,CSS,MySQL,]
+     A Web based project where any user can sell, buy, bid for products (Apache
+     server).This was during 1st year of under graduation, giving emphasis on front 
+     end HTML with extensive usage of Dreamweaver, with utmost importance given to
+     database design alongside plugging in basic aspects of AJAX, CSS and java script using PHP and         
+     MySQL for backend.
+                        
+Developed a Student Record Archival and Retrieval System for Department of Information Science [C++]
+        A File Structure Project on EXTENDIBLE HASHING for EFFICIENT ARCHIVAL and RETRIEVAL of STUDENT RECORD. The project carried out at PES institutions, Bangalore aimed at replacing the existing backend of Information science department’s Student archival and retrieval system and plugging in an optimized code of Extendible hashing to resolve scalability and efficiency issues with the department database.
+Developed a Face Recognition And Detection Application [Under graduation: Final year project 2008] [JAVA]
+     Face Detection and Recognition using Eigen Faces (PCA) technique,
+     Skin connectivity analysis [improved the method as specified by a Publication: 
+     [http://www.ee.iitb.ac.in/~icvgip/PAPERS/166.pdf] and k nearest neighbor algorithm.
+1. The project aims at detection of faces in an image irrespective of lighting conditions and the number of faces using eigen faces technique, skin connectivity and K-nearest neighbor algorithms
+2. The algorithm used can scale large datasets and optimally recognize faces ~ 90% accuracy.

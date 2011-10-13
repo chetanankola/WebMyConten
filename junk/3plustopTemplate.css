@@ -1,0 +1,91 @@
+
+body {
+	background-image:url("/homepage/images/bg4.jpg");
+	background-repeat:no-repeat;
+    background-position:center;
+	background-attachment: fixed;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	/*font: normal 16px Georgia, "Times New Roman", Times, serif; color:#888;*/
+	font:normal 13px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif; text-decoration:none;
+	color: #ccc;
+	background-color: #333;
+	}
+
+
+
+	
+
+
+
+
+/*********************FONTS*******************************/
+a { font:normal 12px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif; color:#888; text-decoration:none; word-wrap:break-word;}
+	html body a:hover, a:hover { color:#000; background-color:#ccff00; border-bottom:1px solid #000; }
+
+#customfont{
+/*font: normal 12px Georgia, "Times New Roman", Times, serif; color:#eee; text-decoration:none;*/
+font:normal 14px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif; color:#eee; text-decoration:none;word-wrap:break-word;
+}
+#titlefont{
+/*font: normal 12px Georgia, "Times New Roman", Times, serif; color:#eee; text-decoration:none;*/
+font:normal 18px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif; color:#ccc; text-decoration:none;word-wrap:break-word;
+}
+#footnotefont{
+font:normal 12px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif; color:#eee; text-decoration:none;word-wrap:break-word;
+}
+
+#bigfont{
+/*font: normal 12px Georgia, "Times New Roman", Times, serif; color:#eee; text-decoration:none;*/
+font:normal 18px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif; color:#eee; text-decoration:none;word-wrap:break-word;
+}
+
+
+/*MIDDLE BOX RELATED ELEMENTS */
+#middle p  {
+  font:normal 14px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif; color:#000; font-weight:bold; text-decoration:none;
+  word-wrap:break-word;
+  }
+ #middle h1  {
+  font:normal 14px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif; color:#000; font-weight:bold; text-decoration:none;
+  word-wrap:break-word;
+  }
+#left a  {
+   font:normal 12px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif; font-weight:bold; color:#000; text-decoration:none; word-wrap:break-word;
+  }  
+  
+/*PANE RELATED ELEMENTS*/
+#pane p  {
+  font:normal 14px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif; color:#000; font-weight:bold; text-decoration:none;
+  word-wrap:break-word;
+  }
+ #pane h1  {
+  font:normal 14px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif; color:#000; font-weight:bold; text-decoration:none;
+  word-wrap:break-word;
+  } 
+ #pane a  {
+   font:normal 12px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif; font-weight:bold; color:#000; text-decoration:none; word-wrap:break-word;
+  }  
+
+/*LEFT BOX RELATED ELEMENTS*/
+#left p  {
+  font:normal 14px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif; color:#000; font-weight:bold; text-decoration:none;
+  word-wrap:break-word;
+  }
+ #left h1  {
+  font:normal 14px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif; color:#000; font-weight:bold; text-decoration:none;
+  word-wrap:break-word;
+  } 
+ #left a  {
+   font:normal 12px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif; font-weight:bold; color:#000; text-decoration:none; word-wrap:break-word;
+  }  
+  
+
+
+
+
+
+
+
+
+

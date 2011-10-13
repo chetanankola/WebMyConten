@@ -1,0 +1,162 @@
+<html>
+
+<!-- 
+<div id="yvideos" style="position: relative;overflow: auto; margin: auto;">
+</div> -->
+
+<script type="text/javascript"> 
+var mywidth = "500";
+var myheight = "300";
+
+var ytubereswidth = "200";
+var ytuberesheight = "180";
+
+var ysearch='lazarus';
+var searchkey= encodeURIComponent('lazarus');
+var final;
+
+//called onkeyup
+function clearvideo()
+{
+    if($('#ysearch').val()=='') {	
+		$('#middle').hide(); //this is needed else the mid div stays even on empty textbox.
+		$('#yframe').remove();			
+		$("#plus").hide();
+		$("#minus").hide();
+		$("#resetmid").hide();
+		$('#blurscreen').css('opacity','0');
+		$('#blurscreen').css('z-index','-10000');
+		$('#yframe').remove();
+		removeytuberesultdiv();
+		$('#ysearch').removeClass('bigtextbox');
+		$('#vidresonblurscreen').removeClass('thickborder jusgloss borderradius');
+		$('#middleonblurscreen').removeClass('thickborder jusgloss borderradius');
+		$('#inblurscreen').removeClass('thickborder jusgloss borderradius');			
+	} else {	
+		$('#blurscreen').css('position','absolute');
+		$('#blurscreen').css('height','2000px');	
+		$("#plus").show();
+		$("#minus").show();
+		$("#resetmid").show();
+		$("#close").show();	
+		$('#blurscreen').css('opacity','0.98');
+		$('#blurscreen').css('background-color','#fff');
+		//$('#blurscreen').addClass('jusgloss');
+		$('#blurscreen').css('z-index','100');
+		$('#pane').css('z-index','2000');
+		$('#vidsearchdiv').css('z-index','2000');
+		$('#yframe').css('z-index','2000');
+		$('#ysearch').css('z-index','2000'); 
+		$('#vidresonblurscreen').fadeIn();
+	
+	
+		//$('#inblurscreen').addClass('slimborder jusgloss borderradius reflectBelow'); 
+		$('#inblurscreen').addClass('borderradius reflectBelow'); 
+		$('#inblurscreen').css('padding','10px');	
+		//contains all controls like + - reset X
+		$('#ysearch').addClass('bigtextbox'); ////search box for youtube
+		//$('#vidresonblurscreen').css('background-color','#ccc'); //side utube results
+		//$('#vidresonblurscreen').addClass('thickborder jusgloss borderradius');
+		$('#vidresonblurscreen').css('padding','10px');	
+		$('#vidresonblurscreen').addClass('ytubeshadow borderradius');
+		//$('#middleonblurscreen').addClass('thickborder jusgloss borderradius');	
+		$('#middleonblurscreen').css('padding','10px');	
+		$('#middleonblurscreen').addClass('ytubeshadow borderradius');	
+		//$('#middleonblurscreen').addClass('ytubeshadow');					
+	}
+}
+//called onkeyup
+function loadvideo(){
+	var videoid = new Array();
+	var i=0;
+	ysearch = $('#ysearch').val();
+	searchkey =encodeURIComponent(ysearch);
+	var yt_url='http://gdata.youtube.com/feeds/api/videos?q='+ysearch+'&format=5&max-results='+totalnumofytuberesults+'&v=2&alt=jsonc'; 
+	$.ajax({
+				type: "GET",
+				url: yt_url,
+				dataType:"jsonp",
+				success: function(response)
+				{
+						if(response.data.items) //IF THERE ARE VALID RESULTS:
+						{
+							i=0;
+							var yresult = new Array();
+							$.each(response.data.items, function(i,data)
+							{    
+								if(i==0) {
+									var video_id=data.id;
+									var video_title=data.title;
+									var video_viewCount=data.viewCount;	
+									var video_frame="<iframe id='yframe' width='"+mywidth+"' height='"+myheight+"' src='http://www.youtube.com/embed/"+video_id+"' frameborder='0' type='text/html'></iframe>";
+									final = video_frame ;
+									//$("#yvideos").html(final).fadeIn('slow'); // Main result
+									 if($('#ysearch').val()!='') //needed else a simple backspace on empty searchbox can cause outlier video as result.
+									{$("#middleonblurscreen").html(final).fadeIn();}
+									else{$('#yframe').remove();}
+								}
+								/*YTUBE SEARCH RESULTS*/
+								if(ysearch!='' && i!=0)
+								{ 
+									videoid[i] = data.id;
+									var frameid= 'ytuberes'+(i-1);
+									yresult=yresult+ "<iframe id='"+frameid+"' width='"+ytubereswidth+"' height='"+ytuberesheight+"' src='http://www.youtube.com/embed/"+videoid[i]+"' frameborder='0' type='text/html'></iframe>";
+									
+									var temp = '#'+frameid;
+								
+									if(1){yresult=yresult+"<br><br>";}
+									//if(i%2==0){yresult=yresult+"<br><br>";}
+									//else{yresult=yresult+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"}
+								}	
+							}); //end of for loop for each of the side video results..
+							$('#vidresonblurscreen').html(yresult).fadeIn();  //display all the frames at once.
+						}
+						else
+						{
+								$("#middleonblurscreen").html("<div id='no'>No Video for your search</div>");
+								removeytuberesultdiv();
+									$('#vidresonblurscreen').removeClass('thickborder jusgloss borderradius ytubeshadow');
+									$('#middleonblurscreen').removeClass('thickborder jusgloss borderradius');
+									$('#inblurscreen').removeClass('thickborder jusgloss borderradius');
+						}		
+				}
+			});//ajax ends 
+} // end of load video
+
+/***************FUNCTION TO CONTROL ZOOM IN AND ZOOMOUT THE CENTER VIDEO AND RESET ITS SIZE *****/
+	 function resetmid()
+	 {
+		$('#yframe').animate({"width": "500px","height": "300px"}, "slow"); 
+	 }
+	 function removesideresultblock()
+	 {
+	 		for (i=0;i<totalnumofytuberesults;i++)
+			{
+				var vframe= '#ytuberes'+i;
+				$(vframe).remove();
+			} 
+			//$('#vidresonblurscreen').removeClass('thickborder ytubeshadow');
+			//$('#vidresonblurscreen').removeClass('ytubeshadow borderradius');
+			//$('#vidresonblurscreen').removeClass('ytubeshadow');
+			//$('#vidresonblurscreen').remove();
+			$('#vidresonblurscreen').css('display','none');
+			
+	 }
+    $('#resetmid').click(function(){ 
+
+		resetmid();
+	 });
+     $('#minus').click(function(){ 
+		removesideresultblock();
+		$('#yframe').animate({"height": "-=100px","width": "-=100px"}, "fast");
+
+				
+     });
+     $('#plus').click(function(){ 
+		removesideresultblock();
+		$('#yframe').animate({"height": "+=100px","width": "+=100px"}, "fast");
+     });
+
+	 /***************************************************************************************/
+ </script>
+</html>  

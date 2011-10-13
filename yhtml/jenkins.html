@@ -1,0 +1,26 @@
+<html>
+
+Some points to be taken care of and reflected in todays meeting:
+
+1>update flow diagram - add screwdriver backend modules[like scripts or ] to it.
+
+2>Modify arrows in block diagram in screwdriver specification.
+
+3>We understand that the webUI of screwdriver will authenticate users by bouncer. And upload the file created on webui [which in turn will become hudson job application file] onto a database [can be Sherpa or zookeeper or how about we separate this out and not tie it with screwdriver]
+
+4>Screwdriver should be able to support not just mojit [single and multiple mojit app which are sort of the same], manhattan applications but also "shared mojits"
+
+4>Add more flow lines in flow diagram
+   a>if(app is a shared mojit) then package using ynpm,push to registry, package app, get package from registry etc [above the deploy using grasshopper flow line] 
+   b>create "Perform ghh undeploy" flow line below smoke test completed flowline[ to stop application from running forever]
+   c> Get logs from manhattaan by ghh [below undeploy flowline
+
+
+Some more understanding points:
+1> User logs in by webui authenticated by bouncer. Then creates a screwdriverjob, which when submitted is uploaded to some predefined or [post-defined] database as a hudson-job-application. Jenkins picks up such application file in timely manner uploads the information into its SVN. 
+Jenkins should also go back and return the job-status-url and upload it to the database[mapping it by appid] for the screwdriver user to be able to look at the status of the hudson job. [or the jenkins need not upload the url rather serve it to the user by restful api] same applies to test results.
+Note: no duplication of test report shall happen. 
+
+
+
+</html>

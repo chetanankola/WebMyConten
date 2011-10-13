@@ -1,0 +1,41 @@
+ <html>
+ <div style="border:2px solid #ccc;">
+ <ul><h3> MY USER STORIES:
+    <li> <a href="http://versionone.corp.yahoo.com/VersionOne/Default.aspx?menu=MyHomeSummaryPage" target="_blank"> Link to my user stories..</a>
+     <li>
+   <li> <p> Details: Specify tasks... for each user stories.. </p>
+    <p>
+One of options I considered was to design an abstraction of test execution interface <br>
+over different execution systems. Something extensible and generic that could be used for long term. <br>
+Then Screwdriver would always generate the test run commandline based <br>
+on the agreed abstraction of test execution and the standard implementation would come with Screwdriver.<br>
+If the followings are test execution interface <br>
+
+ 1) run <options> unit <br>
+ 2) run <options> smoke <br>
+ 3) run <options> regression  <br>
+ 4) run <options> performance <br>
+
+The standard implementation of run script would spit out the following actual commandline to run: <br>
+ 
+ 1) mojito unit test run commandline <br>
+ 2) maven/testng based test run commandline <br>
+ 3) jmeter test run commandline <br>
+    </p>   
+   </li>
+   
+   
+   <li><p>As Mojito QE, we need test execution interface implementation. <p>
+            Kinds of test run script implementation:
+- unit tests
+- secondard tests
+- regression tests
+- performance tests
+
+    
+    
+    
+ </ul>
+ </div>
+ 
+ </html>

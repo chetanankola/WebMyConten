@@ -1,0 +1,44 @@
+<html>
+<head>
+<title> A simple canvas experiment</title>
+<!--	<link rel="stylesheet" href="http://chetanankola.com/homepage/css/layout.css"  type="text/css" />
+	<link rel="stylesheet" href="http://chetanankola.com/homepage/css/layoutstyle.css"  type="text/css" /> -->
+	<link rel="stylesheet" href="/homepage/css/classstyle.css"  type="text/css" />
+
+</head>
+
+<body>
+<canvas id="canvasInAPerfectWorld" class='gitshadow' style="margin:10% 25%;border:1px solid #ccc;"width="490" height="220"></canvas>
+</body>
+
+
+
+
+<script type="text/javascript">
+		var limit = 2; //number of photos
+		var offset = 0; //start position
+		
+		//for JQUERY
+	        $(document).ready(function()
+	        {
+			
+				$('#canvasInAPerfectWorld').fadeIn('slow');
+				
+					$( '#canvasInAPerfectWorld').canvas();
+					$( '#canvasInAPerfectWorld').arc(  
+					[ 150, 100], 
+					{ 'radius': 50, 'startAngle': 0, 'endAngle': 360},
+					{ 
+					'strokeStyle'	 : 'rgba( 183, 204, 79, 0)',
+					'fillStyle'	      : 'rgba( 183, 204, 79, 0.4)',
+					'lineWidth'	          : 5
+					}
+					)
+					.fill();
+			
+	        });
+		
+
+</script>
+
+</html>

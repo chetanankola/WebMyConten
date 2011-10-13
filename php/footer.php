@@ -1,0 +1,1 @@
+<a href=#>Copyleft <img src="http://chetanankola.com/homepage/images/copyleftshiny.png" width=18 height=18></img></a>

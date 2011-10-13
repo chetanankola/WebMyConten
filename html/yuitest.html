@@ -1,0 +1,810 @@
+<!--<html>
+  <head>
+    <title>First Example</title>
+    <script src="http://yui.yahooapis.com/3.3.0/build/yui/yui-min.js"></script>
+  </head>
+  <body>
+    <h1>What say you?</h1>
+    <script>
+      YUI().use("node","datatype-xml", function (Y) {
+        Y.one("body").append("<p>Hello world!</p>");
+        
+            
+    var output = Y.DataType.XML.parse("&lt;myroot&gt;&lt;item type='foo'&gt;&lt;name&gt;Abc&lt;/name&gt;&lt;rank&gt;1&lt;/rank&gt;&lt;/item&gt;&lt;item type='bar'&gt;&lt;name&gt;Def&lt;/name&gt;&lt;rank&gt;2&lt;/rank&gt;&lt;/item&gt;&lt;item type='bat'&gt;&lt;name&gt;Ghi&lt;/name&gt;&lt;rank&gt;3&lt;/rank&gt;&lt;/item&gt;&lt;/myroot&gt;");
+    Y.one("body").append(output);
+    // output is an XML document
+    
+      });
+      
+
+
+      
+      
+    </script>
+  </body>
+</html> -->
+  
+ <!-- 
+  
+<html>
+  <head>
+    <title>CSS Selector Example</title>
+    <script src="http://yui.yahooapis.com/3.3.0/build/yui/yui-min.js"></script>
+  </head>
+  <body class="yui3-skin-sam">
+    <ul class="bar">
+      <li>Hello there</li>
+      <li id="foo">Brave New World</li>
+    </ul>
+  <script>
+      YUI().use("node", "console", function (Y) {
+        var myconsole = new Y.Console();
+        myconsole.render();
+        var node = Y.one("#foo");
+        var nodeList = Y.all(".bar li");
+        var ulList = Y.all("ul");
+        Y.log(node);
+        Y.log(nodeList);
+        Y.log(ulList);
+      });
+  </script>
+  </body>
+</html>
+-->
+
+
+<!--
+
+<html>
+  <head>
+    <title>Image Node Example</title>
+    <script src="http://yui.yahooapis.com/3.3.0/build/yui/yui-min.js"></script>
+  </head>
+  <body class="yui3-skin-sam">
+    <div id="images">
+      <img width src="../images/clouds  .jpg">
+    </div>
+  <script>
+      YUI().use("node", "console", function (Y) {
+        var myconsole = new Y.Console();
+        myconsole.render();
+        var imgNode = Y.one("img");
+        var divNode = imgNode.get("parentNode");
+        imgNode.set("src", "../images/bg.jpg");
+      });
+  </script>
+  </body>
+</html>
+-->
+
+<!--
+<html>
+  <head>
+    <title>Collection Example</title>
+    <script src="http://yui.yahooapis.com/3.3.0/build/yui/yui-min.js"></script>
+  </head>
+  <body class="yui3-skin-sam">
+    <div class="names">
+      <ul>
+        <li>Marie Sklodowska Curie</li>
+        <li>Linus Pauling</li>
+        <li>John Bardeen</li>
+        <li>Frederick Sanger</li>
+      <ul>
+      <input type="submit" value="Who are all these people?" id="mybutton">
+    </div>
+  <script>
+      YUI().use("node", "console", function (Y) {
+        var myconsole = new Y.Console();
+        myconsole.render();
+        var button = Y.one("#mybutton");
+        var items = Y.all(".names li");
+
+        var thesePeople = "";
+
+        items.each(function (node) {
+          thesePeople += node.getContent() + " ";
+        });
+
+
+        function answerQuestion (e) {
+           alert(thesePeople + "are double Nobel Prize winners.");
+        };
+
+        button.on("click", answerQuestion);
+
+        //Y.on("click", answerQuestion, "#mybutton");
+      });
+  </script>
+  </body>
+</html>
+-->
+
+<!--
+<html>
+  <head>
+    <title>Collection Example</title>
+    <script src="http://yui.yahooapis.com/3.3.0/build/yui/yui-min.js"></script>
+  </head>
+  <body class="yui3-skin-sam">
+   <div id="myimagecontainer">
+    <img id="myimage" src="../images/bg.jpg" width='100' height='100'>
+   </div>
+  <script>
+      YUI().use("node", "console", function (Y) {
+        var myconsole = new Y.Console();
+        myconsole.render();
+
+        function domReady () {
+          Y.log("DOM is ready.");
+        };
+
+        function nodeReady () {
+          Y.log("Image of Cher is available.");
+        };
+
+        function childrenReady () {
+          Y.log("My image container's content is ready.");
+        };
+        Y.on('contentready', childrenReady, "#myimagecontainer");
+        Y.on('available', nodeReady, "#myimage");
+        Y.on('domready', domReady);
+       
+
+      });
+  </script>
+  </body>
+</html>
+
+-->
+
+<!--
+<html>
+  <head>
+    <title>Collection Example</title>
+    <script src="http://yui.yahooapis.com/3.3.0/build/yui/yui-min.js"></script>
+  </head>
+  <body class="yui3-skin-sam">
+   <a id="link" href="http://www.google.com">http://www.google.com</a>
+  <script>
+      YUI().use("node", "console", function (Y) {
+        var myconsole = new Y.Console();
+        myconsole.render();
+
+        function noGo(ev) {
+          ev.preventDefault();
+          alert("ev.preventDefault: Dont go to "+Y.one('#link').getContent()+" website... ");
+        }
+
+        Y.one("#link").on("click", noGo);
+
+      });
+  </script>
+  </body>
+</html>
+
+-->
+
+
+<!--
+<html>
+  <head>
+    <title>Collection Example</title>
+    <script src="http://yui.yahooapis.com/3.3.0/build/yui/yui-min.js"></script>
+  </head>
+  <body class="yui3-skin-sam">
+   <a id="link" href="http://www.google.com">http://www.google.com</a>
+  <script>
+      YUI().use("node", "console", function (Y) {
+        var myconsole = new Y.Console();
+        myconsole.render();
+
+        function linkClickHandler(ev) {
+          ev.preventDefault();
+          Y.log(this === Y.one("#link"));
+          // Y.log(Y.one("#link") === ev.target);
+        }
+
+        Y.one("#link").on("click", linkClickHandler);
+
+      });
+  </script>
+  </body>
+</html>
+-->
+
+
+<!--
+<html>
+  <head>
+    <title>Collection Example</title>
+    <script src="http://yui.yahooapis.com/3.3.0/build/yui/yui-min.js"></script>
+  </head>
+  <body class="yui3-skin-sam">
+   <div id="targets">
+    <p>298 West McKinley Avenue, Sunnyvale</p>
+    <p>20745 Stevens Creek Boulevard, Cupertino</p>
+    <p>555 Showers Drive, Mountain View</p>
+   </div>
+
+  <script>
+      YUI().use("node", "console", function (Y) {
+        var myconsole = new Y.Console();
+        myconsole.render();
+
+        function clickHandler(ev) {
+         ev.target.remove();
+          //ev.currentTarget.remove();
+          Y.log (ev.target.getContent() + " has been removed.");
+          // ev.currentTarget.remove();
+        }
+
+        Y.one("#targets").on("click", clickHandler);
+
+      });
+  </script>
+  </body>
+</html>
+-->
+
+
+<!--
+
+<!doctype html>
+<html>
+<head>
+    <title>YUI 3 Getting started</title>
+    <link type="text/css" 
+          rel="stylesheet" 
+          href="http://yui.yahooapis.com/3.3.0/build/cssgrids/grids.css">
+    <link type="text/css" rel="stylesheet" href="assets/exercise2.css">
+    <script src="http://yui.yahooapis.com/3.3.0/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+    <div id="exercise" class="yui3-g">
+        <div class="yui3-u-1-2">
+            <h3>Group A</h3>
+            <ul id="groupA">
+              <li>Frederick Sanger</li>
+              <li>Marie Sklodowska Curie</li>
+              <li>Linus Pauling</li>
+              <li>John Bardeen</li>
+            </ul>
+        </div>
+
+        <div class="yui3-u-1-2">
+            <h3>Group B</h3>
+            <ul id="groupB">
+            </ul>
+        </div>
+    </div>
+  
+<input type='text' value='asdas' id='name' />
+<input id='additem' value='remove name' type='button' />
+
+
+    <script>
+    /* Exercise 1 Instructions
+       - Task 1. Remove the first item from the list #groupA
+       - Task 2. Add a new item with a name of your choice to 
+                 #groupA, first name <em>phasized
+       - Task 3. Attach listeners so that clicking on a list 
+                 item in #groupA moves the item to #groupB
+       - Task 4. Attach listeners so that clicking on a list item in 
+                 #groupB moves the item back to #groupA
+       - Challenge. Do tasks #3 and #4 using two or one event subscriptions.
+       
+       May be useful:
+       - Y.one(selectorString);
+       - Y.Node.create(htmlString);
+       - node.appendChild(node);
+       - node.get(property);
+       - node.remove();
+       - node.on(eventType, callbackFunction);
+       - ev.target / ev.currentTarget;
+
+    */
+
+    YUI().use("node", function (Y) {
+
+
+        function removeListonly(ev) {
+         Y.one("#groupA li").remove();
+         Y.one("#groupA").append("<li><em>chetan </em></li>");
+         var divNode = Y.one('#name').get("parentNode");
+         alert(divNode.get('value'));
+        }
+        function removeList(ev) {
+         ev.target.remove();
+         Y.one("#groupB").append("<li>"+ev.target.getContent()+"</li>");
+
+        }
+         function removeListB(ev) {
+         ev.target.remove();
+         Y.one("#groupA").append("<li>"+ev.target.getContent()+"</li>");
+        }
+        
+        Y.one("#groupA").on("click", removeList);
+        Y.one("#groupB").on("click", removeListB);
+       Y.one('#additem').on('click',removeListonly)
+      });
+
+
+
+
+    </script>
+
+-->
+
+<!--
+<html>
+  <head>
+    <title>Delegation Example</title>
+    <script src="http://yui.yahooapis.com/3.3.0/build/yui/yui-min.js"></script>
+  </head>
+  <body class="yui3-skin-sam">
+   <div id="stores" style="opacity:0;background-color:#123;position:absolute;">
+    <p class="intersection">Corner of McKinley and Crest</p>
+    <p class="address">20745 Stevens Creek Boulevard, Cupertino</p>
+    <p class="address">555 Showers Drive, Mountain View</p>
+   </div>
+
+  <script>
+      YUI().use("node", "console", "transition", function (Y) {
+        var myconsole = new Y.Console();
+        myconsole.render();
+
+        var mynode = Y.one("#stores");
+        mynode.transition({
+          opacity : 1,
+          left : "100px"
+        });
+      });
+  </script>
+  </body>
+</html>
+
+-->
+
+<!--
+<html>
+<head>
+    <title>YUI 3 Exercise 2 Solution</title>
+    <script src="http://yui.yahooapis.com/3.3.0/build/yui/yui-min.js"></script>
+    <link type="text/css" 
+          rel="stylesheet" 
+          href="http://yui.yahooapis.com/3.3.0/build/cssgrids/grids.css">
+    <link type="text/css" rel="stylesheet" href="../css/exercise3.css">
+</head>
+  <body class="yui3-skin-sam">
+    <div class="yui3-g" id="images">
+        <ul class="names">
+            <li class="yui3-u" id="xkcd1">
+                <span class="mask"></span></li>
+            <li class="yui3-u" id="xkcd2">
+                <span class="mask"></span></li>
+            <li class="yui3-u" id="xkcd3">
+                <span class="mask"></span></li>
+        </ul>
+    </div>
+  <script>
+      YUI().use("node", "transition", function (Y) {
+
+      Y.one('#images').delegate({
+         mouseover: function (e) { this.addClass('hover'); },
+         mouseout: function (e) { this.removeClass('hover'); },
+         click: function (e) { this.transition({ height: 0 }); }
+      }, ".mask");
+
+      });
+  </script>
+  </body>
+</html>
+
+-->
+
+<!--
+<html>
+<head>
+    <title>Detaching subscriptions to events</title>
+    <script src="http://yui.yahooapis.com/3.3.0/build/yui/yui-min.js"></script>
+</head>
+  <body class="yui3-skin-sam">
+        <p id="bomb">
+         Bomb
+        </p>
+        <p id="disarmer">
+         Disarmer
+        </p>
+    </div>
+  <script>
+      YUI().use("node", "console", function (Y) {
+
+        new Y.Console().render();
+        var subscription;
+
+        function goBoom (ev) {
+          Y.log("BOOM BOOM BOOM");
+        }
+        
+        function disarm (ev) {
+          subscription.detach();  
+        }
+
+        subscription = Y.one("#bomb").on("click", goBoom);
+       
+       Y.one("#disarmer").on("click", disarm);
+              
+      });
+  </script>
+  </body>
+</html>
+
+-->
+
+<!--
+<html>
+<head>
+    <title>Exercise 3 Solution</title>
+    <script src="http://yui.yahooapis.com/3.3.0/build/yui/yui-min.js"></script>
+</head>
+  <body class="yui3-skin-sam">
+    <ul class="names">
+        <li>Gimli</li>
+        <li>Frodo</li>
+        <li>Elrond</li>
+    </ul>
+
+    <button id="gandalf">Gandalf</button>
+    <button id="legolas">Legolas</button>
+    <button id="sam">Sam</button>
+  <script>
+
+      YUI().use("node", "console", function (Y) {
+
+        new Y.Console().render();
+        
+
+           (function () {
+
+        function Person(first, last) {
+            this.first = first;
+            this.last  = last;
+        }
+        Person.prototype.printName = function () {
+         var fullName = this.first + " " + this.last;
+         Y.one(".names").append("<li>" + fullName + "</li>");
+        };
+
+        var gandalf  = new Person("Gandalf", "The Grey"),
+            legolas = new Person("Legolas", "Son of Thranduil"),
+            sam  = new Person("Samwise", "Gamgee");
+
+        Y.on("click", Y.bind(gandalf.printName, gandalf),   "#gandalf");
+        Y.on("click", Y.bind(legolas.printName, legolas), "#legolas");
+        Y.on("click", Y.bind(sam.printName, sam),   "#sam");
+
+    })();
+              
+      });
+  </script>
+  </body>
+</html>
+-->
+
+
+<!--
+<html>
+<head>
+    <title>Talking to the server with IO</title>
+    <script src="http://yui.yahooapis.com/3.3.0/build/yui/yui-min.js"></script>
+</head>
+  <body class="yui3-skin-sam">
+        <p id="sender">
+         Click Me To Send
+        </p>
+        <p id="receiver">
+         Server reply will appear here
+        </p>
+    </div>
+  <script>
+      YUI().use("node", "console", "io", function (Y) {
+
+        new Y.Console().render();
+
+        function showServerReply (id, reply) {
+          Y.one("#receiver").setContent(reply.responseText);
+        }
+
+        function showErrorMessage () {
+          Y.one("#receiver").setContent("Houston, we have a problem.");
+        }
+
+        var config = {
+          method: "post",
+          data: "foo=2&bar=3",
+
+          on : {
+            success: showServerReply,
+            failure: showErrorMessage
+          }
+        };
+
+        Y.one("#sender").on("click", function (ev) { 
+                                      Y.io("test.php", config); 
+                                     });
+              
+      });
+  </script>
+  </body>
+</html>
+
+-->
+<!--
+
+<html>
+<head>
+    <title>Talking to the server with IO</title>
+    <script src="http://yui.yahooapis.com/3.3.0/build/yui/yui-min.js"></script>
+</head>
+  <body class="yui3-skin-sam">
+        <p id="sender">
+         Click Me To Send
+        </p>
+        <p id="receiver">
+         Server reply will appear here
+        </p>
+    </div>
+  <script>
+      YUI().use("node", "console", "io", 'json', function (Y) {
+
+        new Y.Console().render();
+
+        function showServerReply (id, reply) {
+          var data = Y.JSON.parse(reply.responseText);
+          Y.one("#receiver").append(data.content);
+        }
+
+        function showErrorMessage () {
+          Y.one("#receiver").setContent("Houston, we have a problem.");
+        }
+
+        var config = {
+
+          on : {
+            success: showServerReply,
+            failure: showErrorMessage
+          }
+        };
+
+        Y.one("#sender").on("click", function (ev) { 
+                                      Y.io("test2.php", config); 
+                                     });
+              
+      });
+  </script>
+  </body>
+</html>
+-->
+
+<!--
+<html>
+<head>
+    <title>Talking to the server with IO</title>
+    <script src="http://yui.yahooapis.com/3.3.0/build/yui/yui-min.js"></script>
+</head>
+  <body class="yui3-skin-sam">
+        <form id="myform" action="test.php">
+          <input type="text" id="foo" value="hello">
+          <input type="submit" id="submitbutton" value="submit">
+        </form>
+        <p id="receiver">
+         Server reply will appear here
+        </p>
+    </div>
+  <script>
+      YUI().use("node", "console", "io", function (Y) {
+
+        new Y.Console().render();
+
+        function showServerReply (id, reply) {
+          Y.one("#receiver").setContent(reply.responseText);
+        }
+
+        function showErrorMessage () {
+          Y.one("#receiver").setContent("Houston, we have a problem.");
+        }
+
+        Y.one("#myform").on("submit", function (ev) {
+        
+        ev.preventDefault();
+        var config = {
+          method : "post",
+          form   : {
+                   id: this.get("id")
+          },
+          on : {
+            success: showServerReply,
+            failure: showErrorMessage
+          }
+        };
+  
+        Y.io(this.get("action"), config); 
+        });
+              
+      });
+  </script>
+  </body>
+</html>
+-->
+<!--
+
+<html>
+<head>
+    <title>Exercise 4 Solution</title>
+    <script src="http://yui.yahooapis.com/3.3.0/build/yui/yui-min.js"></script>
+</head>
+  <body class="yui3-skin-sam">
+    <p id="time">(what time is it?)</p>
+    <button id="go">What time is it?</button>
+  <script>
+      YUI().use("node", "console", 'io', 'json', function (Y) {
+
+        new Y.Console().render();
+
+        function printTime(id, response) {
+          try {
+              var data = Y.JSON.parse(response.responseText);
+          }
+          catch (ex) {
+              data = { time: "ERROR" };
+          }
+          Y.one("#time").setContent(data.time);
+        }
+
+        Y.one("#go").on("click", function () {
+            Y.io("watch.php", {
+                on: {
+                    success: printTime
+                }
+            });
+        });
+      });
+  </script>
+  </body>
+</html>
+-->
+
+
+
+<!--
+<html>
+<head>
+    <title>Overlay example</title>
+    <script src="http://yui.yahooapis.com/3.3.0/build/yui/yui-min.js"></script>
+</head>
+  <body class="yui3-skin-sam">
+  <div id="overlayContainer"></div>
+  <script>
+      YUI().use("node", "console", 'overlay', function (Y) {
+            
+            new Y.Console().render();
+
+            var overlay = new Y.Overlay({
+              height: "300px",
+              visible: false,
+              bodyContent: "Hello, World!"
+            });
+
+            overlay.set("bodyContent", "Hello, Universe!");
+            Y.log(overlay.get("bodyContent"));
+            Y.log(overlay.get("visible"));
+
+            function visibilityChange (ev) {
+              Y.log("Overlay visibility has changed to " + ev.newVal);
+            }
+            
+            overlay.on("visibleChange", visibilityChange);
+
+            overlay.render();
+            overlay.render("#overlayContainer");
+            overlay.set("visible", true);
+      });
+  </script>
+  </body>
+</html>
+
+-->
+
+<!--
+<html>
+<head>
+    <title>Exercise 5 Solution</title>
+    <script src="http://yui.yahooapis.com/3.3.0/build/yui/yui-min.js"></script>
+    <link type="text/css" rel="stylesheet" href="assets/exercise6.css">
+</head>
+  <body class="yui3-skin-sam">
+   <div id="sayIt">
+        <input type="text" value="First person in space">
+        <button id="update">Say it!</button>
+    </div>
+
+    <div id="overlay"></div>
+  <script>
+      YUI().use("node", "console", 'overlay', 'dd-plugin', function (Y) {
+            
+            new Y.Console().render();
+            var overlay = new Y.Overlay({
+                                srcNode: "#overlay",
+                                centered: true,
+                                width: "300px",
+                                headerContent: "<h3>Yury Gagarin is:</h3>",
+                                footerContent: "<button id='ok'>OK</button>",
+                                visible: false
+                              });
+            overlay.plug(Y.Plugin.Drag, {
+                                          handles: [ ".yui3-widget-hd" ]
+                                        });
+            overlay.render();
+            
+          
+            Y.one("#ok").on("click", Y.bind(overlay.hide, overlay));
+            Y.one("#update").on("click", function () {
+              var what = Y.one("#sayIt input").get("value");
+              overlay.set("bodyContent", what);
+              overlay.show();
+            });
+            
+      });
+  </script>
+  </body>
+</html>
+
+-->
+
+
+<html>
+<head>
+    <title>Exercise 5 Solution</title>
+    <script src="http://yui.yahooapis.com/3.3.0/build/yui/yui-min.js"></script>
+</head>
+<input type="submit" value="Who are all these people?" id="mybutton">
+  
+<div id='demo' style='border:1px solid #ccc'> hello hello <br> <br> <br> <br> <br> <br><br> <br> <br><br> <br> <br></div>
+  <script>
+
+YUI().use('transition', function (Y) {
+
+ 
+    // Transition is available and ready for use.
+function mytransition()
+{
+        Y.one('#demo').transition({
+        duration: 0.75,
+        easing: 'ease-out',
+     
+        height: 0,
+     
+/*        width: {
+            delay: 0.75,
+            easing: 'ease-in',
+            value: 0
+        },
+*/     
+        opacity: {
+            delay: 1.5,
+            duration: 1.25,
+            value: 0
+        }
+    });
+        
+}
+ 
+var button = Y.one("#mybutton");
+        button.on("click", mytransition);
+});
+
+  </script>
+  </body>
+</html>
