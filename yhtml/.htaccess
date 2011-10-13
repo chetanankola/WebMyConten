@@ -1,7 +1,0 @@
-AuthUserFile /home/chetanan/.htpasswd
-AuthName "Chetan's Y! protected files"
-AuthType Basic
-
-<Limit GET POST>
-require valid-user
-</Limit>
