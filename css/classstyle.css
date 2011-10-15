@@ -24,6 +24,7 @@ background-color: #fff;zoom: 1;filter: progid:DXImageTransform.Microsoft.Shadow(
 .boxlightshadow { box-shadow: 0 0 14px #ccc;-moz-box-shadow:0 0 14px #ccc;-webkit-box-shadow: 0 0 14px #ccc}
 
 
+
 .newborderradius {-moz-border-radius: 4px;-webkit-border-radius: 4px;border-radius: 4px;}
 .newboxshadow { box-shadow: 0 1px 4px rgba(0,0,0,0.3); -moz-box-shadow:0 1px 4px rgba(0,0,0,0.3); -webkit-box-shadow:0 1px 4px rgba(0,0,0,0.3);}
 .new_blue_gradient_bg {
@@ -380,10 +381,15 @@ font:normal 11px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif; color:#f
     box-shadow: inset #fff 0 0 2px, inset rgba(255,255,255,.4) 0 5px 10px; 
 }
 
-
-.gitshadow
-{
-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3);-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3);-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3);
+.footershadow {
+    -moz-box-shadow: inset #fff 0 0 2px, inset rgba(255,255,255,.4) 0 5px 10px;
+    -o-box-shadow: inset #fff 0 0 2px, inset rgba(255,255,255,.4) 0 5px 10px;
+    box-shadow: inset #fff 0 0 2px, inset rgba(255,255,255,.4) 0 5px 10px; 
+}
+.gitshadow {
+	box-shadow:0 1px 4px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3);
 }
 
 .ytubeshadow
@@ -467,3 +473,55 @@ background: -ms-linear-gradient(top, rgba(249,252,247,1) 0%,rgba(245,249,240,1) 
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9fcf7', endColorstr='#f5f9f0',GradientType=0 ); /* IE6-9 */
 background: linear-gradient(top, rgba(249,252,247,1) 0%,rgba(245,249,240,1) 100%); /* W3C */
 }
+
+
+
+
+ul{
+    margin: 0 auto;
+    padding: 0;
+}
+
+ul.horizontal_left_list {
+    margin: 0 auto;
+    padding: 0;
+}
+ul.horizontal_left_list li{
+    text-align: left;
+    float: left;
+    list-style: none;
+  /*padding: 3px 10px 3px 10px; 
+    margin: 5px;*/
+	/*padding: 1px 1px 1px 1px; *//*top right left bottom*/
+   /* border: 1px solid #ccc;*/
+}
+
+ul.horizontal_right_list {
+    margin:0 auto;
+    padding: 0;
+}
+ul.horizontal_right_list li{
+    text-align: left;
+    float: right;
+    list-style: none;
+}
+
+
+
+
+ul.pane_left_list {
+    margin: 0 auto;
+    padding: 0;
+}
+ul.pane_left_list li{
+    text-align: left;
+    float: left;
+    list-style: none;
+	padding: 3px 10px 3px 10px; 
+    /*margin: 5px;*/
+	margin:0px;
+	border: 1px solid #eff;
+	border-radius:4px 4px 4px 4px;
+	background:#eef;
+}
+

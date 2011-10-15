@@ -120,8 +120,16 @@ a#smaller{font:normal 8px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif;
 #pane p     {font:normal 15px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif; color:#000; font-weight:bold; text-decoration:none;word-wrap:break-word;}
 #pane h1    {font:normal 14px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif; color:#000; font-weight:bold; text-decoration:none;word-wrap:break-word;} 
 #pane a     {font:normal 15px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif; font-weight:bold; color:#000; text-decoration:none; word-wrap:break-word;}
-#pane a:hover    {font:normal 15px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif; font-weight:bold; color:#000; text-decoration:none; word-wrap:break-word;
+/*#pane a:hover    {font:normal 15px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif; font-weight:bold; color:#000; text-decoration:none; word-wrap:break-word;
 border-bottom: 1px solid #000; background-color:#eee; padding-top:4px;}  
+*/
+#pane li:hover    {font:normal 15px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif; font-weight:bold; color:#000; text-decoration:none; word-wrap:break-word;
+/*border-bottom: 4px solid #000;*/ 
+background-color:#ccc;
+
+padding-top:4px;}  
+
+
 
 #leftmenu p     {font:normal 14px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif; color:#000; font-weight:bold; text-decoration:none;word-wrap:break-word;}
 #leftmenu h1  	{font:normal 14px "Trebuchet Ms", Verdana, Arial, Helvetica, sans-serif; color:#000; font-weight:bold; text-decoration:none;word-wrap:break-word;}

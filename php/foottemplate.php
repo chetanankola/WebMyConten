@@ -1,10 +1,12 @@
-	<div id="footer1" style="display:block;">	
-		<?php include('headpanel.php'); ?> 
+
+<!--	<div id="footer1" style="display:block;">	
+		<?php /*include('headpanel.php'); */ ?> 
 	</div>
+-->
+	<div id="footer2" class="footershadow">
+		<?php  include('footer.php'); ?>
+	</div> 
 
-
-	
-	<div id="footer2"> <?php  include('headpanel.php');  ?> </div> 
 	
 
 	<!--

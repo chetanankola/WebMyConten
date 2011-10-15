@@ -315,7 +315,10 @@ var newtemplate = function(){
 			//$('#fbframe').addClass('gitshadow');
 			//$('#pane').css('background','#FFFFFF');
            //$('#pane').addClass('gitshadow appleborderradius');
-			$('#pane').addClass('gitshadow transparentborder');
+			
+			
+			//$('#pane').addClass('gitshadow transparentborder');
+			$('#pane').addClass('transparentborder');
             $('#fbstats').css('background-color','#FFFFFF');
             $('#leftmenu').css('background-color','#FFFFFF');
             $('#middle').css('background-color','#FFFFFF'); 
@@ -400,10 +403,10 @@ var LinkHighlightBehaviour = function() {
 		$(this).addClass('highlight2');
 	});
      
-	$('#pane a').click(
+	$('#pane li a').click(
 		function(e){
 		e.preventDefault; // prevent default behaviour which is to navigate..
-		 $('.highlight').removeClass('highlight2');
+		 $('.highlight').removeClass('highlight');
 		 $(this).addClass('highlight');
 		});
 
