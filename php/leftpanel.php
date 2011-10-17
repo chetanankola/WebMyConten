@@ -1,10 +1,54 @@
 
-   
+
+<ul>
+<li><a href=# id='resumelink'  onclick="displaymsg('Resume last updation:September 2011');loadpage('/homepage/html/resume.html',0); return false;">Resume</a>
+</li>
+</ul>
+
+
+<ul>
+<li><a href=#  onclick="displaymsg('Instant search of youtube');loadpage('/homepage/html/ytube.html',2); return false;">Search Videos</a>
+</li>
+</ul>
+
+<ul>
+<li><a href=#  onclick="displaymsg('Search flickr photos');loadpage('/homepage/html/photos.html',1);return false;">Search Photos</a>
+</li>
+</ul>
+
+<ul>
+<li><a id='musiclink' href=#   onclick="displaymsg('Music');loadpage('/homepage/html/music.html',0);return false;">Music</a>
+</li>
+</ul>
+
+
+
+<ul>
+<li><a href=# onclick="displaymsg('BLOBS');loadpage('http://chetanankola.com/BLOBS/html/spec.html',0);">BLOBS</a> 
+</li></ul>
+
+<ul>
+<li><a href=#  onclick="displaymsg('KRAACS');loadpage('http://chetanankola.com/KRAACS/html/KRAACS.html',0);"> KRAACS </a>
+</li>
+</ul>
+
+<!--
+<ul>
+<li>
+<a href="http://chetanankola.com/homepage/php/rmove.php">Clickirri</a>
+</li>
+</ul>
+-->
+
+<ul>
+<li> <a href='#' onclick="displaymsg('Canvas Experiments');loadpage('http://chetanankola.com/homepage/html/canvas.html',0);">Draw Board</a>  
+</li>
+</ul>
+
+ <!--  
 <table cellpadding="3" cellspacing="3" border="0" style="margin-bottom:0px; ">
 <tbody>
-<!--<tr> <td><span id="headerplate" style="padding:2px;"class='headerplate'> <br> </span></td></tr> -->
-
-
+-->
 
 <!--
 <tr><td class='tddark'>
@@ -14,13 +58,7 @@
 <a style="display:none;" id="captionprofilepic" href=# onclick="toggleprofilepic();"></a> 
  </td></tr>
  -->
- <!--<span style="float:left;width:130px;"> -->
-
 <!--
-<tr><td class='tdlight'><a href=# id='resumelink'  onclick="displaymsg('Resume last updation:September 2011');loadpage('/resume/index.html',0); return false;">Resume</a> <br>
- </td></tr>
--->
-
 <tr><td class='tdlight'><a href=# id='resumelink'  onclick="displaymsg('Resume last updation:September 2011');loadpage('/homepage/html/resume.html',0); return false;">Resume</a> <br>
  </td></tr> 
 
@@ -49,14 +87,15 @@
  <tr><td class='tdlight'> 
 <a href='#' onclick="displaymsg('Canvas Experiments');loadpage('http://chetanankola.com/homepage/html/canvas.html',0);">Draw Board</a> <br> 
  </td></tr>
-  
+ -->
  
  <!--
 <tr><td class='tdlight'> <a href="http://chetanankola.com/homepage/php/rmove.php">Clickirri</a> </span><br>
 </td></tr>
 -->
 
-
+<!--
 </tbody>
 </table>
+-->
 <!--<a href=# onclick="loadpage('/homepage/html/aphoto.html');return false;">aucomplic</a> <br> -->

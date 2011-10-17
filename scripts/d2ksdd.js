@@ -318,21 +318,25 @@ var newtemplate = function(){
 			
 			
 			//$('#pane').addClass('gitshadow transparentborder');
-			$('#pane').addClass('transparentborder');
+			$('#pane').addClass('transparentborder ytubeshadow');
             $('#fbstats').css('background-color','#FFFFFF');
             $('#leftmenu').css('background-color','#FFFFFF');
             $('#middle').css('background-color','#FFFFFF'); 
             //$('#middle').addClass('gitshadow appleborderradius');
-           $('#middle').addClass('middleshadow');
-		   //$('#middle').addClass('gitshadow');
+          // $('#middle').addClass('middleshadow');
+		   $('#middle').addClass('ytubeshadow');
 
 			$('#leftmenutogglebutton').css('background-color','#393A3B');
             $('#leftmenutogglebutton').css('border-radius','4px');	
-            $('#leftmenutogglebutton').addClass('jusgloss regularshadow3 transparentborder'); //glossshadow //solidborder
+           // $('#leftmenutogglebutton').addClass('jusgloss regularshadow3 transparentborder'); //glossshadow //solidborder
+		   $('#leftmenutogglebutton').addClass('jusgloss regularshadow1 transparentborder'); 
             $('#leftmenutogglebutton p').css('color','#fff');
-            $('#leftmenu').addClass('bgcolor transparentborder opacity regularshadow3'); 
+           // $('#leftmenu').addClass('bgcolor transparentborder opacity leftmenuborders regularshadow3'); 
+		   $('#leftmenu').addClass('ytubeshadow');
 			$('#leftmenu').css('border-radius','4px');	
-            $('#footer').addClass('gitshadow footerfont');
+			//$('#footer').addClass('gitshadow footerfont');
+			$('#footer2').addClass('ytubeshadow');
+				
             $('#full').css('background-color','#FfFfFf');
             $('#full').addClass('lightshadow');//deepestshadow	
 		    $('#full').css('opacity','0.8'); 
@@ -396,13 +400,27 @@ var BannerBehaviour = function() {
 }
 
 var LinkHighlightBehaviour = function() {
-	$('#leftmenu a').click(
+/*	$('#leftmenu a').click(
 	function(e){
 		e.preventDefault; // prevent default behaviour which is to navigate..
 		$('.highlight2').removeClass('highlight2');
 		$(this).addClass('highlight2');
 	});
-     
+*/
+/* //this will retain only mark on links.
+$('#leftmenu li a').click(
+	function(e){
+		e.preventDefault; // prevent default behaviour which is to navigate..
+		$('.highlight2').removeClass('highlight2');
+		$(this).addClass('highlight2');
+	});
+*/
+	$('#leftmenu li').click(
+		function(e){
+			e.preventDefault; // prevent default behaviour which is to navigate..
+			$('.highlight2').removeClass('highlight2');
+			$(this).addClass('highlight2');
+		});
 	$('#pane li a').click(
 		function(e){
 		e.preventDefault; // prevent default behaviour which is to navigate..
@@ -416,11 +434,12 @@ $(document).ready(function(){
 	//$('#leftmenutogglebutton').addClass('regularshadow3');	
 	newtemplate();
 	$('#musiclink').click().fadeIn('fast');
-	$('#top').fadeIn('fast');
+	/*$('#top').fadeIn('fast');
 	$('#leftmenutogglebutton').fadeIn('fast');
 	$('#pane').fadeIn('fast');
-		
+	*/
 
+	
 
 	$('#leftmenutogglebutton').click(function(){ 
 	/*	if( $('#leftmenutogglebutton').is('.regularshadow1') ) {
@@ -431,6 +450,7 @@ $(document).ready(function(){
 			$('#leftmenutogglebutton').addClass('regularshadow1');		
 		}
 	*/	
+	/*
 		if( $('#leftmenutogglebutton').is('.regularshadow3') ) {
 			$('#leftmenutogglebutton').removeClass('regularshadow3');	
 			$('#leftmenutogglebutton').addClass('regularshadow1');		
@@ -438,6 +458,17 @@ $(document).ready(function(){
 			$('#leftmenutogglebutton').removeClass('regularshadow1');	
 			$('#leftmenutogglebutton').addClass('regularshadow3');		
 		}
+	*/
+	
+		if( $('#leftmenutogglebutton').is('.regularshadow3') ) {
+			$('#leftmenutogglebutton').removeClass('regularshadow3');	
+			$('#leftmenutogglebutton').addClass('regularshadow1');		
+		} else {
+			$('#leftmenutogglebutton').removeClass('regularshadow1');	
+			$('#leftmenutogglebutton').addClass('regularshadow3');		
+		}
+	
+	
 		$('#leftmenu').slideToggle();	
 	});
 	

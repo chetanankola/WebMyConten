@@ -13,7 +13,8 @@
 	<link rel="stylesheet" href="http://chetanankola.com/homepage/css/layout.css"  type="text/css" />
 	<link rel="stylesheet" href="http://chetanankola.com/homepage/css/layoutstyle.css"  type="text/css" />
 	<link rel="stylesheet" href="http://chetanankola.com/homepage/css/classstyle.css"  type="text/css" />
-
+	<link href='http://fonts.googleapis.com/css?family=Reenie+Beanie' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
 <!--	
 	<script src="http://chetanankola.com/homepage/scripts/head.min.js"></script>
 
@@ -62,7 +63,8 @@ head.js("http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js?ver=1.4
   <tr>
     <td>
 		<div id='leftmenutogglebutton'> 
-		<p align="center"> MENU </p>
+		<!--<a href=# align="center"> MENU </a> -->
+		<ul><li><b>MENU </b></li> </ul>
 		</div> 
 
 		<div id="leftmenu">  <?php include('leftpanel.php'); ?> </div>
