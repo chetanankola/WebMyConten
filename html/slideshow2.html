@@ -1,0 +1,244 @@
+
+
+
+<style type="text/css">
+#slideshowul {
+
+}
+
+ul.slideshow_left_list {
+   margin: 0 auto;
+}
+ul.slideshow_left_list li{
+    text-align: left;
+    float: left;
+    list-style: none;
+	margin:0px;
+	border: 1px solid #eff;
+	border-radius:4px 4px 4px 4px;
+	background:#eef;
+}
+#slideshowul #next #close #prev:hover {
+	text-decoration:none; 
+	word-wrap:break-word;
+	background-color:#eee;
+	padding-top:4px;
+	background: #e3e3e3;
+	background: -moz-linear-gradient(top, #e3e3e3, #c8c8c8);
+	background: -webkit-gradient(linear, left top, left bottom, from(#e3e3e3), to(#c8c8c8));
+	-moz-box-shadow: 1px 1px 3px #292929;
+	-webkit-box-shadow: 1px 1px 3px #292929;
+	box-shadow: 1px 1px 3px #292929;
+	color: #454545;
+	text-shadow: 0 1px 0 white;
+}
+#slideshowul li a {
+display:block;
+}
+
+</style>
+
+<div id="slideshowmaskscreen" style='width:100%;height:100%;position:fixed;background-color:#fff;top:0;left:0;z-index:999;opacity:0.96;'> 
+</div>
+<div id='title' style="position:fixed;display:block; top:0; z-index:1001; left:40%;color:#000; background-color:#ccc; word-wrap:break-word;height:20px; padding:4px;">
+Welcome to some slideshow meh!
+</div>
+
+<ul id='slideshowul' class="slideshow_left_list">
+
+
+<li id='close' class='ytubeshadow transparentborder borderradius' style="position:fixed;border:2px solid #ccc; right:1%; top:0%; z-index:1003; width:30px; padding:14px;">
+<a href="#">X</a> 
+</li>
+
+<li id='next' class='ytubeshadow transparentborder appleborderradius' style="position:fixed;border:2px solid #ccc; left:13%; top:10%; z-index:1002; width:30px;padding:4px;">
+<a href="javascript:void(0)">&gt;</a> 
+</li>
+
+
+
+
+
+<li id='prev'class='ytubeshadow transparentborder appleborderradius' style="position:fixed;border:2px solid #ccc; left:10%; top:10%; z-index:1002;width:30px; 20px; padding:4px;">
+<a href="javascript:void(0)">&lt;</a> 
+</li>
+
+</ul>
+
+<div id='footo' class='ytubeshadow transparentborder appleborderradius' style="text-align:center;display:block;z-index:10000;position:fixed;margin-left:10%;margin-right:100px; top:50px; border:7px solid #000;min-width: 700px; ">
+</div>
+
+<div id='slideshowmode' class='ytubeshadow transparentborder appleborderradius' style='padding:4px; position:fixed; left:10%; top:20%; z-index:1000;border:5px solid #000;'>
+Start Slideshow
+</div>
+
+<div id='slideshowstop' class='ytubeshadow transparentborder appleborderradius' style='padding:4px; position:fixed; left:10%; top:30%; z-index:1000;border:5px solid #000;'>
+Stop Slideshow
+</div>
+
+
+<div id='increasespeed' class='ytubeshadow transparentborder appleborderradius' style='padding:4px; position:fixed; left:10%; top:40%; z-index:1000;border:5px solid #000;'>
+Fasten slideshow
+</div>
+
+<div id='decreasespeed' class='ytubeshadow transparentborder appleborderradius' style='padding:4px; position:fixed; left:10%; top:50%; z-index:1000;border:5px solid #000;'>
+Slowdown slideshow
+</div>
+
+
+
+
+
+<p id='speedcounter' class='ytubeshadow transparentborder appleborderradius' style='padding:10px; height:10px; position:fixed; left:10%; top:60%; z-index:1000;border:5px solid #000;'>
+</p>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+	
+		var index=0; 
+		var datalen = 0;
+			var urllink = 'http://chetanankola.com/homepage/images/index.php';
+			var urlfolder = 'http://chetanankola.com/homepage/images/';
+			//var url = 'http://chetanankola.com/vampire/';
+			//var url = 'http://chetanankola.com/homepage/images/';
+		function getnextImage(isplus) {
+				$.getJSON(urllink, function(data) {
+					datalen = data.length;
+					if(isplus){
+						index = index+1;
+					} else {
+						index = index-1;
+					}
+					if(index>=data.length || index<=0) {
+						index=0;
+					}
+					var height=500;
+					//var width=800;
+					var imglink = '<img style="margin-left:auto;margin-right:auto;" src="'+urlfolder+data[index]+'" height='+height+'> </img>';
+					$('#footo').html('<a href="'+urlfolder+data[index]+'" target=_blank>'+imglink+'</a>').show('slow');
+					$('#title').html(index+'.'+data[index]).show('slow');
+			 });
+		} 
+		function getnext() {
+			  var isplus=1;
+			  $.getJSON(urllink, function(data) {
+			  datalen = data.length;
+			  if(isplus){
+				index = index+1;
+			  } else {
+				index = index-1;
+			  }
+			  if(index>=data.length || index<=0) {
+				index=0;
+			  }
+			  var height=500;
+			  //var width=800;
+
+			   var imglink = '<img src="'+urlfolder+data[index]+'" height='+height+'> </img>';
+			 
+			 
+			  
+			   $('#footo').html('<a href="'+urlfolder+data[index]+'" target=_blank>'+imglink+'</a>').show('slow');
+			   $('#title').html(index+'.'+data[index]).show('slow');
+
+			 });
+			 
+		} 		
+		function closeslideshow() {
+			  $('#slideshowmaskscreen').remove();
+
+			  $('#slideshowul').remove();
+			 $('#title').remove();  
+		}
+
+
+		$(document).ready(function() {
+		
+			$('#slideshowstop').hide();
+			$('#speedcounter').hide();
+			$('#increasespeed').hide();
+			$('#decreasespeed').hide();
+			var setinthandler;
+			var slideshowinterval = 2000;
+			function updateCounter() {
+				var t = (slideshowinterval/1000);
+				$('#speedcounter').html(t+'seconds');
+			}
+			$('#close').click(
+				function(e){
+					e.preventDefault; // prevent default behaviour which is to navigate..
+					$('#slideshowmaskscreen').remove();
+					$('#slideshowul').remove();
+					$('#title').remove();  
+					clearInterval(setinthandler);
+			$('#slideshowstop').remove();
+			$('#speedcounter').remove();
+			$('#increasespeed').remove();
+			$('#decreasespeed').remove();
+			$('#footo').remove();
+			$('#slideshowmode').remove();
+			});	
+			
+			$('#slideshowmode').click(
+				function(e){
+					e.preventDefault; // prevent default behaviour which is to navigate..
+					setinthandler=setInterval(getnext,slideshowinterval);
+					$('#slideshowmode').hide();
+					$('#slideshowstop').show();
+					$('#speedcounter').show();
+					updateCounter();
+			});
+			$('#slideshowstop').click(
+				function(e){
+					e.preventDefault; // prevent default behaviour which is to navigate..
+					clearInterval(setinthandler);
+					$('#slideshowmode').show();
+					$('#slideshowstop').hide();
+					//updateCounter();
+					$('#speedcounter').hide();
+			});
+			$('#decreasespeed').click(
+				function(e){
+					e.preventDefault; // prevent default behaviour which is to navigate..
+					clearInterval(setinthandler);
+					slideshowinterval = slideshowinterval + 1000; 
+					setinthandler=setInterval(getnext,slideshowinterval);
+					updateCounter();
+
+			});			
+			$('#increasespeed').click(
+				function(e){
+					e.preventDefault; // prevent default behaviour which is to navigate..
+
+					if(slideshowinterval>1000) {	
+						clearInterval(setinthandler);
+						slideshowinterval = slideshowinterval - 1000; 
+						setinthandler=setInterval(getnext,slideshowinterval);
+					}
+					updateCounter();
+			});
+			getnextImage(1);
+			$('#next').click(
+			function(e){
+				e.preventDefault; // prevent default behaviour which is to navigate..
+				getnextImage(1);
+			});
+			
+			$('#prev').click(
+			function(e){
+				e.preventDefault; // prevent default behaviour which is to navigate..
+				getnextImage(0);
+			});
+		});
+</script>
+
+
+<div id='footer2'> 
+<!--#include virtual="http://chetanankola.com/_chetan_globalfooter.html" -->
+</div>

@@ -2,7 +2,7 @@
 		<?php /*include('headpanel.php'); */ ?> 
 	</div>
 -->
-	<div id="footer2">
+	<div id="footer2" class='gitshadow'>
 		<?php  include('footer.php'); ?>
 	</div> 
 	<!--
@@ -15,6 +15,9 @@
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js?ver=1.4.0"></script>
 	<script src="http://yui.yahooapis.com/3.3.0/build/yui/yui-min.js" charset="utf-8"></script>
 	<script type="text/javascript" src = "http://chetanankola.com/homepage/scripts/d2ksdd.js"></script>
+	<script type="text/javascript" src = "http://chetanankola.com/homepage/scripts/jCallout.js"></script>
+	<script src="http://www.google.com/jsapi"></script>
+	<script>google.load("swfobject", "2.2");</script>
 
-</body>
+	</body>
 </html> 

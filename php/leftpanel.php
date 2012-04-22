@@ -1,7 +1,8 @@
 
 
+
 <ul>
-<li><a href=# id='resumelink'  onclick="displaymsg('Resume last updation:September 2011');loadpage('/homepage/html/resume.html',0); return false;">Resume</a>
+<li><a href=# id='resumelink'  onclick="displaymsg('Resume last updation:September 2011');loadpage('/homepage/html/resume.html',0); return false;"><span>Resume </span></a>
 </li>
 </ul>
 
@@ -24,13 +25,18 @@
 
 
 <ul>
-<li><a href=# onclick="displaymsg('BLOBS');loadpage('http://chetanankola.com/BLOBS/html/spec.html',0);">BLOBS</a> 
+<li><a href=# onclick="displaymsg('BLOBS');loadpage('http://chetanankola.com/BLOBS/html/spec.html',0); return false;">BLOBS</a> 
 </li></ul>
 
 <ul>
-<li><a href=#  onclick="displaymsg('KRAACS');loadpage('http://chetanankola.com/KRAACS/html/KRAACS.html',0);"> KRAACS </a>
+<li><a href=#  onclick="displaymsg('KRAACS');loadpage('http://chetanankola.com/KRAACS/html/KRAACS.html',0); return false;"> KRAACS </a>
 </li>
 </ul>
+
+
+
+
+
 
 <!--
 <ul>

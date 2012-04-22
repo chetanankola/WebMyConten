@@ -1,0 +1,213 @@
+
+<head>
+<style type="text/css">
+#slideshowul {
+
+}
+
+ul.slideshow_left_list {
+   margin: 0 auto;
+}
+ul.slideshow_left_list li{
+    text-align: left;
+    float: left;
+    list-style: none;
+	margin:0px;
+	border: 1px solid #eff;
+	border-radius:4px 4px 4px 4px;
+	background:#eef;
+}
+#slideshowul #next #close #prev:hover {
+	text-decoration:none; 
+	word-wrap:break-word;
+	background-color:#eee;
+	padding-top:4px;
+	background: #e3e3e3;
+	background: -moz-linear-gradient(top, #e3e3e3, #c8c8c8);
+	background: -webkit-gradient(linear, left top, left bottom, from(#e3e3e3), to(#c8c8c8));
+	-moz-box-shadow: 1px 1px 3px #292929;
+	-webkit-box-shadow: 1px 1px 3px #292929;
+	box-shadow: 1px 1px 3px #292929;
+	color: #454545;
+	text-shadow: 0 1px 0 white;
+}
+#slideshowul li a {
+display:block;
+}
+
+</style>
+</head>
+
+<!--
+<div id="slideshowmaskscreen" style='width:100%;height:100%;position:fixed;background-color:#fff;top:0;left:0;z-index:1000;opacity:0.96;'> </div>
+-->
+
+<div id='title' style="position:fixed;display:block; top:0; z-index:1001; left:40%;color:#000; background-color:#ccc; word-wrap:break-word;height:20px; padding:4px;">
+Welcome to some slideshow meh!
+</div>
+
+
+<ul id='slideshowul' class="slideshow_left_list">
+	<li id='close' class='ytubeshadow transparentborder borderradius' style="position:fixed;border:2px solid #ccc; right:1%; top:0%; z-index:1003; width:30px; padding:14px;">
+	<a href="javascript:closeslideshow();">X</a> 
+	</li>
+
+	<li id='next' class='ytubeshadow transparentborder appleborderradius' style="position:fixed;border:2px solid #ccc; right:10px; top:50%; z-index:1002; width:30px;padding:4px;">
+	<a href="javascript:void(0)">&gt;</a> 
+	</li>
+
+	<li id='footo' class='ytubeshadow transparentborder appleborderradius' style="text-align:center; padding:2px;display:block;z-index:10000;position:fixed;margin-left:20px;margin-right:100px; top:30px; border:7px solid #000;  ">
+	</li>
+	
+	<li id='prev'class='ytubeshadow transparentborder appleborderradius' style="position:fixed;border:2px solid #ccc; left:10px; top:50%; z-index:1002;width:30px; 20px; padding:4px;">
+	<a href="javascript:void(0)">&lt;</a> 
+	</li>	
+</ul>
+
+
+
+<script type="text/javascript">
+		var Orig_gheight = 502;
+		var g_height = 502;
+		var imgHeight = g_height;
+		var imgWidth = g_height;
+		var g_imgPath;
+		
+		var wrapperheight = g_height;
+		var wrapperwidth = g_height;
+
+		function findHHandWW() {
+			imgHeight = this.height;
+			imgWidth = this.width;
+			if((imgWidth/imgHeight)>2.0){
+				g_height = 302;
+			} else {
+				g_height = Orig_gheight;
+			}
+			return true;
+		}
+
+		function PreLoadImage(imgPath) {
+			var myImage = new Image();
+			myImage.name = imgPath;
+			myImage.onload = findHHandWW;
+			myImage.src = imgPath;
+			g_imgPath = imgPath;
+			
+			wrapperheight = g_height;
+			var ratio = g_height/imgHeight;
+			wrapperwidth = imgWidth*ratio;
+			//alert(wrapperwidth);
+			//alert(wrapperheight + ' ' +wrapperwidth);
+			
+			//alert(imgHeight+'  '+imgWidth+ ' ' + g_imgPath);
+
+					
+		}
+		
+		
+		var index=0; 
+		function getnextImage(urlfolder,isplus) {
+			 
+			  $.getJSON(urlfolder, function(data) {
+			  if(isplus){
+				index = index+1;
+			  } else {
+				index = index-1;
+			  }
+			  if(index>=data.length || index<=0) {
+				index=0;
+			  }
+			  var height=g_height;
+			  //alert(g_height);
+			   //var width=800;
+			   // alert(urlfolder+' '+isplus+ ' ' + data[index] );
+			   if(index+1<=data.length) {
+						PreLoadImage(urlfolder+data[index+1]);
+						
+				}
+			   //alert(imgHeight+'before display'+imgWidth);
+			   
+			   var imglink = '<img style="margin-left:auto;margin-right:auto;"src="'+urlfolder+data[index]+'" height='+height+'> </img>'; 
+			   $('#footo').html('<a href="'+urlfolder+data[index]+'" target=_blank>'+imglink+'</a>').show('slow');
+			   $('#footo').css("min-height",wrapperheight);
+			   
+			   $('#footo').css("min-width",wrapperwidth);
+			   //$('#footo').css("min-height",imgHeight);
+			   //$('#footo').css("min-width",imgWidth);
+			   $('#title').html(index+'.'+data[index]).show('slow');
+			 });
+			 
+		}
+		function buffernextImage(urlfolder) {
+			  $.getJSON(urlfolder, function(data) {
+			   if(index+1<=data.length) {
+					//PreLoadImage(urlfolder+data[index+1]);
+					var myImage = new Image();
+					myImage.name = urlfolder+data[index+1];
+					myImage.onload = console.log("buffered:["+(index+1)+"]"+data[index+1]);
+					//alert("buffered:["+(index+1)+"]"+data[index+1]);
+					myImage.src = urlfolder+data[index+1];
+				}
+			 }); 
+		}
+		function bufferImage(urlfolder,nextn) {
+			  //alert("called");
+			  $.getJSON(urlfolder, function(data) {
+			   tempindex = index;
+			   while(tempindex<=data.length && nextn!=0) {
+					//PreLoadImage(urlfolder+data[index+1]);
+					var myImage = new Image();
+					myImage.name = urlfolder+data[tempindex];
+					myImage.onload = console.log("buffered:["+(tempindex)+"]"+data[tempindex]);
+					//alert("buffered:["+(index+1)+"]"+data[index+1]);
+					myImage.src = urlfolder+data[tempindex];
+					nextn--;
+					tempindex--;
+				}
+			 }); 
+		}
+		function closeslideshow() {
+			$('#slideshowmaskscreen').remove();
+			$('#slideshowul').remove();
+			$('#title').remove();	  
+		}
+		$(document).ready(function() {
+			var maskscreen = '<div id="slideshowmaskscreen" style="width:100%;height:100%;position:fixed;background-color:#fff;top:0;left:0;z-index:1000;opacity:0.96;"> </div>';
+			$(maskscreen).hide().appendTo("html").show();
+			 
+
+			/*var wholelist = '<ul id="slideshowul" class="slideshow_left_list"> \
+								<li id="close" class="ytubeshadow transparentborder borderradius" style="position:fixed;border:2px solid #ccc; right:1%; top:0%; z-index:1003; width:30px; padding:14px;"> \
+								<a href="javascript:closeslideshow();">X</a> \
+								</li> \
+								<li id="next" class="ytubeshadow transparentborder appleborderradius" style="position:fixed;border:2px solid #ccc; right:10px; top:50%; z-index:1002; width:30px;padding:4px;"> \
+								<a href="javascript:void(0)">&gt;</a> \
+								</li> \
+								<li id="footo" class="ytubeshadow transparentborder appleborderradius" style="text-align:center; padding:2px;display:block;z-index:10000;position:fixed;margin-left:20px;margin-right:100px; top:30px; border:7px solid #000;  min-height:70%; min-width:50%"> \
+								</li> \
+								<li id="prev"class="ytubeshadow transparentborder appleborderradius" style="position:fixed;border:2px solid #ccc; left:10px; top:50%; z-index:1002;width:30px; 20px; padding:4px;"> \
+								<a href="javascript:void(0)">&lt;</a>  \
+								</li></ul> ';
+			$(wholelist).hide().appendTo("#slideshowmaskscreen").show();
+			*/
+			var url = 'http://chetanankola.com/photos/images/';
+			//var url = 'http://chetanankola.com/vampire/';
+			//var url = 'http://chetanankola.com/homepage/images/';
+			getnextImage(url,1);
+			//setInterval(bufferImage(url,5),1000);
+			$('#next').click(
+			function(e){
+				e.preventDefault; // prevent default behaviour which is to navigate..
+				getnextImage(url,1);
+				//buffernextImage(url);
+				//bufferImage(url,2);
+			});
+			
+			$('#prev').click(
+			function(e){
+				e.preventDefault; // prevent default behaviour which is to navigate..
+				getnextImage(url,0);
+			});
+		});
+</script>

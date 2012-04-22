@@ -1,33 +1,264 @@
 
-<h1> THE SEAGULL S6 </h1>
-<div align="left" style="display:inline;" >
-<img src="/homepage/images/myguitar.jpg" width="200px" height="300px"> </img> 
-</div>
 
 
-<div align="right" style="display:inline;" >
-	<p></p>
-</div>
-<!--
-<script type="text/javascript"> 
-play();
 
-function play() 
-{ 
-var sound1 = document.createElement('embed'); 
 
-with(sound1) 
-{ 
-setAttribute('src','homepage/html/cava.mp3'); 
-setAttribute('autostart', 'true'); 
-setAttribute('hidden', 'true');
-setAttribute('loop', '0'); 
-} 
+<style type="text/css"> 
+  
+ul.musicclass {
+    margin:0 320px auto;
+    padding: 1px;
+	list-style: none;
+	width:420px;
+}
 
-document.body.appendChild(sound1);
+ul.musicclass li{
+    text-align: center;
+    list-style: none;
+	border-radius:4px 4px 4px 4px;
+	background:#f8f8f8;
+	padding:0px;
+	margin-top: 3px;
+	border:1px solid #f8f8f8;
+}
+ul.musicclass li:hover{
+	background:#eee;
+	border:1px solid #eee;
+}
 
+ul.musicclass li a {
+	display:block;
+	padding:10px;
+}
+
+#musiclisthead {
+	background:#aaa;
+	padding:10px;
+	width:382px;
+	background: -moz-linear-gradient(top,  rgba(206,220,231,1) 0%, rgba(90,107,115,1.0) 99%, rgba(89,106,114,1.0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(206,220,231,1)), color-stop(99%,rgba(90,107,115,1.0)), color-stop(100%,rgba(89,106,114,0.7))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(206,220,231,1) 0%,rgba(90,107,115,1.0) 99%,rgba(89,106,114,1.0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(206,220,231,1) 0%,rgba(90,107,115,1.0) 99%,rgba(89,106,114,1.0) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(206,220,231,1) 0%,rgba(90,107,115,1.0) 99%,rgba(89,106,114,1.0) 100%); /* IE10+ */
+	background: linear-gradient(top,  rgba(206,220,231,1) 0%,rgba(90,107,115,1.0) 99%,rgba(89,106,114,1.0) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedce7', endColorstr='#b3596a72',GradientType=0 ); /* IE6-9 */
+}
+
+
+
+ul.playerul li.headlist {
+background:#aaa;
+background: -moz-linear-gradient(top,  rgba(206,220,231,1) 0%, rgba(90,107,115,0.7) 99%, rgba(89,106,114,0.7) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(206,220,231,1)), color-stop(99%,rgba(90,107,115,0.7)), color-stop(100%,rgba(89,106,114,0.7))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(206,220,231,1) 0%,rgba(90,107,115,0.7) 99%,rgba(89,106,114,0.7) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(206,220,231,1) 0%,rgba(90,107,115,0.7) 99%,rgba(89,106,114,0.7) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(206,220,231,1) 0%,rgba(90,107,115,0.7) 99%,rgba(89,106,114,0.7) 100%); /* IE10+ */
+background: linear-gradient(top,  rgba(206,220,231,1) 0%,rgba(90,107,115,0.7) 99%,rgba(89,106,114,0.7) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedce7', endColorstr='#b3596a72',GradientType=0 ); /* IE6-9 */
 
 }
-</script>
 
--->
+
+
+
+#musicimage {
+position:absolute;
+margin:0 auto;
+}
+
+
+.transitionStyle {
+	background-color: #fff;
+	-webkit-transition:background-color .5s ease-in;
+	-moz-transition:background-color .5s ease-in;
+	-o-transition:background-color .5s ease-in;
+	-ms-transition:background-color .5s ease-in;
+	transition:background-color .5s ease-in;
+	}
+
+.transitionStyle:hover{
+	cursor: pointer;
+	background-color: #aaa;
+box-shadow:0 1px 10px rgba(0, 0, 0, 0.7);
+-moz-box-shadow:0 1px 10px rgba(0, 0, 0, 0.7);
+-webkit-box-shadow:0 1px 10px rgba(0, 0, 0, 0.7);
+
+	}
+	
+
+
+
+#musiclist {
+overflow-y:scroll;
+overflow-x:hidden;
+height:135px; 
+}
+#musiclist li {
+font-family: 'Gloria Hallelujah', cursive;
+font-weight:bold; 
+color:#000;
+font-size: 13px; 
+margin-top: 2px;
+}
+#playerulid {
+overflow-y:auto;
+}
+#playerulid li {
+font-family: 'Gloria Hallelujah', cursive;
+font-weight:bold; 
+color:#000;
+font-size: 13px; 
+}
+ul.playerul{
+    margin:10px 320px auto;
+	list-style: none;
+	width:420px;
+	padding:1px;
+}
+
+ul.playerul li{
+    text-align: center;
+    list-style: none;
+	border-radius:4px 4px 4px 4px;
+	background:#fff;
+	padding:10px;
+}
+
+#displaymsgboard {
+position:fixed;
+top:-2px;
+color:#555;
+-moz-box-shadow: 0 0 5px 5px #ccc;
+-webkit-box-shadow: 0 0 5px 5px #ccc;
+box-shadow: 0 0 5px 5px #ccc;
+background:#fff;
+z-index:1000;
+}
+.Playerreflection {
+  -webkit-box-reflect:
+  below 2px 
+-webkit-gradient(linear, left top, left bottom, from(transparent), 
+  color-stop(0.4, transparent), 
+  to(rgba(255, 255, 255, 0.4  )));  
+}
+
+
+
+
+</style>
+
+<h2 id="hollister" class='hollisterplate' style="cursor:move;" >MUSIC</h2>
+
+<div class="top">
+	<div id="musicimage" style="padding:13px;float:left; left:17px;top:77px;cursor:move;" class="transitionStyle">
+	<img src="/homepage/images/guitarandme.JPG"  height="300px"></img>  
+	</div>
+</div>
+<ul id='musiclist' class="musicclass gitshadow appleborderradius">
+
+
+<li id="musiclisthead" class='headlist' style='cursor:pointer;'> My Acoustic Compositions</li>
+<li id="hiddenlistelem" style="display:none;height:35px;"> </li>
+<li><a href="#" onclick="convertlinktoaudio(this,'http://chetanankola.com/music/Endlessfall.mp3');return false;" >Endless fall</a></li>
+<li><a href="#" onclick="convertlinktoaudio(this,'http://chetanankola.com/music/Dreamson.mp3');return false;" >Dreams on</a></li>
+<li><a href="#" onclick="convertlinktoaudio(this,'http://chetanankola.com/music/clouds.mp3');return false;" >Clouds(Weirdly sung)</a></li>
+<li><a href="#" onclick="convertlinktoaudio(this,'http://chetanankola.com/music/songs/darkfoggg.mp3');return false;" >Dark fog</a></li>
+<li><a href="#" onclick="convertlinktoaudio(this,'http://chetanankola.com/music/songs/IfIhadtogoaway.mp3');return false;" >Go away</a></li>
+
+<li><a href="#" onclick="convertlinktoaudio(this,'http://chetanankola.com/music/songs/fun/ramachasinging.mp3');return false;" >Abhishek's song</a></li>
+<li><a href="#" onclick="convertlinktoaudio(this,'http://chetanankola.com/music/acoustictansition_aud.mp3');return false;" >Acoustic Transition</a></li>
+<li><a href="#" onclick="convertlinktoaudio(this,'http://chetanankola.com/music/songs/fun/shettythebitchfinalsong.mp3');return false;" >Shetty you bitch</a></li>
+<li><a href="#" onclick="convertlinktoaudio(this,'http://chetanankola.com/music/justsymphony.mp3');return false;" >Symphony</a></li>
+<li><a href="#" onclick="convertlinktoaudio(this,'http://chetanankola.com/music/songs/sundayafternoon.mp3');return false;" >Sunny days</a></li>
+<li><a href="#" onclick="convertlinktoaudio(this,'http://chetanankola.com/music/weirdelectricmix.mp3');return false;" >weird electric</a></li>
+
+</ul>
+
+ 
+
+<div class="Playerreflection">
+<ul style='display:none;' id="playerulid"  class="playerul gitshadow ">
+	<li id='nowplaying' class='headlist' style='cursor:move;'> Player
+	</li>
+	<li> <div id='musicplayer' style="display:none;"></div> 
+	</li>
+</ul>
+</div>
+<div  id='displaymsgboard'  style='display:none;width:400px;margin: height:40px; padding:10px; margin:10px 320px auto;'> </div>
+
+
+
+<script type='text/javascript'>
+	YUI().use('dd-plugin', function(Y) {
+		/*var node1 = Y.one('#musiclist');
+		node1.plug(Y.Plugin.Drag);	
+		node1.dd.addHandle('#musiclisthead'); 
+		*/
+		var node2 = Y.one('#playerulid');
+		node2.plug(Y.Plugin.Drag);	
+		node2.dd.addHandle('#nowplaying'); 
+		
+		var node3 = Y.one('#musicimage');
+		node3.plug(Y.Plugin.Drag);	
+		
+		var node4 = Y.one('#hollister');
+		node4.plug(Y.Plugin.Drag);		
+	});
+	
+	
+	
+function convertlinktoaudio(linkObj, link) {
+	if (document.createElement('audio').canPlayType) {
+		if (!document.createElement('audio').canPlayType('audio/mpeg')) {
+		 //displaymsg("Browser has no Html5 support for mp3");
+		 var html5audiotag = '<embed type="application/x-shockwave-flash" src="http://www.google.com/reader/ui/3523697345-audio-player.swf?audioUrl='+link+'" width="400" height="50" allowscriptaccess="never" quality="best" bgcolor="#ffffff" wmode="window" flashvars="playerMode=embedded" />'
+		 document.getElementById("musicplayer").style.display="block"; 
+		 document.getElementById("musicplayer").innerHTML = html5audiotag;
+		}else {
+		 var html5audiotag = '<audio controls="controls"><source src="'+link+'" type="audio/mpeg" /> Your browser does not support the audio element.</audio>';
+		 document.getElementById("musicplayer").style.display="block"; 
+		 document.getElementById("musicplayer").innerHTML = html5audiotag;
+		}
+		document.getElementById("playerulid").style.display="block";
+		document.getElementById("nowplaying").innerHTML = 'Now playing: '+ linkObj.innerHTML + '...';
+		
+		$("#displaymsgboard").html('Hold and drag Player or the Image');
+		$("#displaymsgboard").fadeIn('slow');
+		setTimeout('clear()',3000);
+		
+	}else { 
+		document.getElementById("musicplayer").innerHTML = "Browser has not HTML5 audio support: use-"+link;
+	}
+}
+function clear() {
+$("#displaymsgboard").fadeOut('slow');
+}
+
+
+$('#musiclist').scroll(function() {
+     var x = 0 - $(this).scrollLeft();
+    var y = $(this).scrollTop();
+	if(y>1) {
+		var p2 = $('#musiclisthead').position();
+		$('#musiclisthead').css("position","inherit");
+		$('#musiclisthead').css("position","fixed");
+		$('#musiclisthead').addClass('gitshadow');
+		$('#hiddenlistelem').show();	
+	}else {
+		$('#musiclisthead').css("position","inherit");
+		$('#musiclisthead').removeClass('gitshadow');
+		$('#hiddenlistelem').hide();
+	}
+});
+
+/*
+$(window).scroll(function() {
+		$('#musiclisthead').css("position","inherit");
+		$('#musiclisthead').removeClass('gitshadow');
+		$('#hiddenlistelem').hide(); 
+});
+*/
+
+
+
+</script>

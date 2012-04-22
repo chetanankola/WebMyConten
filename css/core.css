@@ -1,0 +1,20 @@
+/* Global */
+
+/* Apply a natural box layout model to all elements */
+* {-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+
+html {background: #E9E9E9;}
+body {color: #333;}
+a {text-decoration: none; color: #722C84;}
+li {list-style-type: none;}
+
+.clickable {text-align: center; border-radius: 5px; background: -webkit-gradient(linear, left top, left bottom, from(white), to(#D9D9D9)); border: 1px solid #AAA; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);}
+.clickable:active {background: #D9D9D9;}
+.clickable a {display: block; padding: 5px 0;}
+
+.button {margin-bottom: 5px;}
+
+.toggle {height: 0; overflow: hidden; -webkit-transition-property: height; -webkit-transition-duration: .2s; -webkit-transition-timing-function: ease-out;}
+.toggle-show {}
+
+.panel {border: 1px solid #AAA; padding: 5px; border-radius: 5px; margin: 5px; position: relative; background: #FFF;}
