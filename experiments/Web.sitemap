@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0">
+  <siteMapNode title="experiments.chetanankola.com" description="Personal" url="~/">
+    <siteMapNode title="EBchecked" description="EBchecked" url="~/EBchecked/">
+      <siteMapNode title="media" description="Media" url="~/EBchecked/media/">
+        <siteMapNode title="143419" description="143419" url="~/EBchecked/media/143419/">
+        </siteMapNode>
+      </siteMapNode>
+      <siteMapNode title="topic" description="Topic" url="~/EBchecked/topic/">
+        <siteMapNode title="142911" description="142911" url="~/EBchecked/topic/142911/">
+        </siteMapNode>
+        <siteMapNode title="587189" description="587189" url="~/EBchecked/topic/587189/">
+          <siteMapNode title="Sachin Tendulkar" description="Sachin Tendulkar" url="~/EBchecked/topic/587189/Sachin-Tendulkar/">
+          </siteMapNode>
+        </siteMapNode>
+        <siteMapNode title="76845" description="76845" url="~/EBchecked/topic/76845/">
+        </siteMapNode>
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode title="Chetan Ankola" description="Personal" url="~/gadgets/"/>
+    <siteMapNode title="images" description="Images" url="~/images/">
+    </siteMapNode>
+    <siteMapNode title="Chetan Ankola" description="Personal" url="~/jobs/"/>
+    <siteMapNode title="Chetan Ankola" description="Personal" url="~/music/"/>
+    <siteMapNode title="Chetan Ankola" description="Personal" url="~/spiritual/"/>
+    <siteMapNode title="Chetan Ankola" description="Personal" url="~/sports/"/>
+  </siteMapNode>
+</siteMap>

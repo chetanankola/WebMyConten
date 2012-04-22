@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>experiments.chetanankola.com</title>
+    <link>http://experiments.chetanankola.com/</link>
+    <description>RSS feed : http://experiments.chetanankola.com/</description>
+    <lastBuildDate>Sun, 13 Nov 2011 13:53:39 GMT</lastBuildDate>
+    <generator>A1 Sitemap Generator</generator>
+      <item>
+        <title>Chetan Ankola</title>
+        <description>Personal</description>
+        <link>http://experiments.chetanankola.com/gadgets/</link>
+      </item>
+      <item>
+        <title>Chetan Ankola</title>
+        <description>Personal</description>
+        <link>http://experiments.chetanankola.com/jobs/</link>
+      </item>
+      <item>
+        <title>Chetan Ankola</title>
+        <description>Personal</description>
+        <link>http://experiments.chetanankola.com/music/</link>
+      </item>
+      <item>
+        <title>Chetan Ankola</title>
+        <description>Personal</description>
+        <link>http://experiments.chetanankola.com/spiritual/</link>
+      </item>
+      <item>
+        <title>Chetan Ankola</title>
+        <description>Personal</description>
+        <link>http://experiments.chetanankola.com/sports/</link>
+      </item>
+  </channel>
+</rss>

@@ -1,0 +1,114 @@
+
+body {
+	background:#F2F2F2;
+	background: url(http://chetanankola.com/homepage/images/applelinen.png);
+}
+
+#header {
+margin:20px 10% auto;
+position:relative;
+
+padding:10px;
+border-radius:2px;	
+/*background: -moz-linear-gradient(top, #aeaeae, #d8d8d8);
+background: -webkit-gradient(linear, left top, left bottom, from(#fefefe), to(#fafafa	));
+*/
+background:#fff;
+border-bottom: 4px solid #000;
+
+}
+
+#header h1 {
+font-family: 'Signika Negative', sans-serif;
+font-family: 'Exo', sans-serif;
+font-family: 'Unna', serif;	
+font-size:2.5em;
+color:#666;
+text-shadow: 0px 3px 0 white;	
+}
+
+#main {
+margin:20px 10% auto;
+background:#fff;
+padding-top:30px;
+padding-bottom:30px;	
+border-bottom: 4px solid #000;
+}
+
+.dark {
+margin:20px 4% auto;
+position:relative;
+background:#ccc;
+padding:10px;
+border-radius:2px;	
+border:1px solid #cccccc; 
+-webkit-box-shadow:0 1px 7px rgba(0,0,0,.4);
+-moz-box-shadow:0 1px 7px rgba(0,0,0,.4); 
+box-shadow:0 1px 7px rgba(0,0,0,.4);
+}
+
+.dark p,h3 {
+font-family: 'Signika Negative', sans-serif;
+font-family: 'Exo', sans-serif;
+font-family: 'Unna', serif;
+font-size:1.7em;
+color:#444;
+font-weight:strong;
+text-shadow: 0px 1px 0 #eee;
+}
+
+
+.bright {
+margin:20px 4% auto;
+position:relative;
+background:#fff;/*background:#0089CF; is blue*/ 
+
+padding:10px;
+border-radius:3px;	
+border:1px solid #eee; 
+box-shadow:0 1px 6px rgba(0, 0, 0, 0.3);
+-moz-box-shadow:0 1px 6px rgba(0, 0, 0, 0.3);
+-webkit-box-shadow:0 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+.bright p,h3 {
+font-family: 'Signika Negative', sans-serif;
+font-family: 'Exo', sans-serif;
+font-family: 'Unna', serif;
+font-size:1.7em;
+color:#888;
+text-shadow: 0px 1px 0 white;
+}
+
+  
+
+
+#footer{
+text-align:center;
+margin:20px 10% auto;
+position:relative;
+
+padding:10px;
+border-radius:2px;
+
+//background:#fff;	
+/*background: -moz-linear-gradient(top, #aeaeae, #d8d8d8);
+background: -webkit-gradient(linear, left top, left bottom, from(#fefefe), to(#fafafa	));
+*/
+}
+
+#footer h3 {
+font-family: 'Waiting for the Sunrise', cursive;
+font-size:1.0em;
+color:#777;
+font-weight:strong;
+text-shadow: 0px 1px 0 white;
+}
+
+.gradient {
+background: -moz-linear-gradient(top, #aeaeae, #d8d8d8);
+background: -webkit-gradient(linear, left top, left bottom, from(#fefefe), to(#d8d8d8));
+border-radius: 3px;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+}

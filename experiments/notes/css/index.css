@@ -1,0 +1,142 @@
+h1 {
+
+	font-size:4.0em;
+	font-weight:normal;
+}
+
+#addnew {
+
+	text-shadow: 0px 1px 0 white;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fefefe), to(#d8d8d8));	
+	-webkit-box-shadow: 0px 0px 2px #292929;
+	-moz-box-shadow: 0px 0px 2px #292929;
+	-box-shadow: 0px 0px 2px #292929;
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-left:30px;	
+	padding-right:30px;
+	font-size:3.0em;
+
+}
+
+textarea#notes {
+	width: 100%;
+	height: 120px;
+	border: 0px solid #000;
+	padding: 15px;
+	font-family: Tahoma, sans-serif;
+	border-radius:4px;
+	background:#fefefe;
+	//background-image: url(http://chetanankola.com/homepage/images/subtle_freckles.png);
+	background-position: bottom right;
+	background-repeat: repeat;
+	font-size:1.3em;
+	text-shadow: 0px 1px 0 white;
+
+
+}
+
+
+    .yui3-dd-proxy {
+        text-align: left;
+    }
+    #play {
+        border: 1px solid black;
+        padding: 10px;
+        margin: 10px auto;
+        zoom: 1;
+        font-size:1.0em;
+    }
+    #play:after { display: block; clear: both; visibility: hidden; content: '.'; height: 0;}
+    #play ul {
+        //border: 1px solid black;
+        //margin: 10px auto;
+       // width:inherit;
+       // width: 310px;
+       // height: 300px;
+        //float: left;
+        padding: 0;
+        zoom: 1;
+        position: relative;
+        //overflow: auto;
+    }
+    #play ul li {
+        background-image: none;
+        list-style-type: none;
+        padding-left: 20px;
+        padding: 5px;
+        margin: 2px auto;
+        cursor: move;
+        zoom: 1;
+        position: relative;
+        width:inherit;
+        /*-webkit-box-flex: 1;
+        display:-webkit-box;*/
+    }
+    #play ul li.list1 {
+        background-color: #8DD5E7;
+        border:1px solid #004C6D;
+
+    }
+    #play ul li.list2 {
+        background-color: #EDFF9F;
+        border:1px solid #CDCDCD;
+}    
+
+div.mod {
+   // width: 150px;
+   // left: 5px; 
+   //margin: 15px 0px;
+
+   margin: 5px auto;
+   padding-left:3px;
+   padding-right:3px;
+
+
+background: rgb(249, 249, 252);  border-radius: 4px; border: 1px solid rgb(212, 216, 235); padding-bottom: 1px; font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "Helvetica", "Arial", sans-serif; position: relative; zoom: 1; box-shadow: 0px 0px 6px rgba(0,0,0,0.15); -moz-border-radius: 4px; -webkit-border-radius: 4px; -moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.15); -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+}
+div.mod div.inner {
+    overflow: hidden; 
+
+    zoom: 1;
+}
+div.mod div.inner div.loading {
+    background-position: 5px 5px; padding: 5px 5px 5px 25px; 
+    background-image: url("progress.gif"); background-repeat: no-repeat;
+}
+#play div.mod div.inner ul li {
+    padding-left: 20px; font-size: 80%;
+}
+div.mod div.inner ul li a {
+    color: rgb(0, 0, 0);
+}
+div.mod h2 {
+    background: rgb(229, 230, 241); margin: 0px; padding: 4px 7px 5px; border-radius: 4px 4px 0px 0px; color: rgb(94, 107, 164); font-size: 107.69%; font-weight: bold; position: relative; cursor: move; zoom: 1; -moz-border-radius: 4px 4px 0 0; -webkit-border-radius: 4px 4px 0 0;
+}
+div.mod h2 strong {
+    padding-left: 25px; font-weight: bold; background-image: url("http://l.yimg.com/a/i/tb/iconsgif/rss_1.gif"); background-repeat: no-repeat;
+}
+div.minned h2 {
+    border-bottom-color: rgb(204, 204, 204); border-bottom-width: 1px; border-bottom-style: solid;
+}
+div.mod h2 a.close {
+    margin: 2px; padding: 0px; border: 1px solid rgb(229, 230, 241); top: 1px; width: 17px; height: 13px; text-align: center; right: 4px; color: rgb(94, 107, 164); font-size: 80%; font-weight: bold; text-decoration: none; display: block; position: absolute; background-color: rgb(249, 249, 252);
+}
+div.mod h2 a.min {
+    margin: 2px; padding: 0px; border: 1px solid rgb(229, 230, 241); top: 1px; width: 17px; height: 13px; text-align: center; right: 4px; color: rgb(94, 107, 164); font-size: 80%; font-weight: bold; text-decoration: none; display: block; position: absolute; background-color: rgb(249, 249, 252);
+}
+div.mod h2 a.min {
+    right: 25px;
+}
+div.minned h2 a.min {
+    right: 25px;
+}
+div.mod h2 a.close:hover {
+    border-color: rgb(212, 216, 235);
+}
+div.mod h2 a.min:hover {
+    border-color: rgb(212, 216, 235);
+}
+
+
+​

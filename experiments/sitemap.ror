@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:ror="http://rorweb.com/0.1/">
+  <channel>
+    <title>experiments.chetanankola.com</title>
+    <link>http://experiments.chetanankola.com/</link>
+    <description>ROR sitemap feed : http://experiments.chetanankola.com/</description>
+    <lastBuildDate>Sun, 13 Nov 2011 13:53:39 GMT</lastBuildDate>
+    <generator>A1 Sitemap Generator</generator>
+    <ror:about>sitemap</ror:about>
+    <ror:type>SiteMap</ror:type>
+      <item>
+        <title>Chetan Ankola</title>
+        <description>Personal</description>
+        <link>http://experiments.chetanankola.com/gadgets/</link>
+        <ror:resourceOf>sitemap</ror:resourceOf>
+        <ror:sortOrder>1</ror:sortOrder>
+        <ror:updatePeriod>week</ror:updatePeriod>
+        <ror:language>en</ror:language>
+        <ror:size>6</ror:size>
+        <ror:format>text/html</ror:format>
+        <ror:desc>Personal</ror:desc>
+        <ror:keywords>ankola, chetan</ror:keywords>
+      </item>
+      <item>
+        <title>Chetan Ankola</title>
+        <description>Personal</description>
+        <link>http://experiments.chetanankola.com/jobs/</link>
+        <ror:resourceOf>sitemap</ror:resourceOf>
+        <ror:sortOrder>1</ror:sortOrder>
+        <ror:updatePeriod>week</ror:updatePeriod>
+        <ror:language>en</ror:language>
+        <ror:size>6</ror:size>
+        <ror:format>text/html</ror:format>
+        <ror:desc>Personal</ror:desc>
+        <ror:keywords>ankola, chetan</ror:keywords>
+      </item>
+      <item>
+        <title>Chetan Ankola</title>
+        <description>Personal</description>
+        <link>http://experiments.chetanankola.com/music/</link>
+        <ror:resourceOf>sitemap</ror:resourceOf>
+        <ror:sortOrder>1</ror:sortOrder>
+        <ror:updatePeriod>week</ror:updatePeriod>
+        <ror:language>en</ror:language>
+        <ror:size>6</ror:size>
+        <ror:format>text/html</ror:format>
+        <ror:desc>Personal</ror:desc>
+        <ror:keywords>ankola, chetan</ror:keywords>
+      </item>
+      <item>
+        <title>Chetan Ankola</title>
+        <description>Personal</description>
+        <link>http://experiments.chetanankola.com/spiritual/</link>
+        <ror:resourceOf>sitemap</ror:resourceOf>
+        <ror:sortOrder>1</ror:sortOrder>
+        <ror:updatePeriod>week</ror:updatePeriod>
+        <ror:language>en</ror:language>
+        <ror:size>6</ror:size>
+        <ror:format>text/html</ror:format>
+        <ror:desc>Personal</ror:desc>
+        <ror:keywords>ankola, chetan</ror:keywords>
+      </item>
+      <item>
+        <title>Chetan Ankola</title>
+        <description>Personal</description>
+        <link>http://experiments.chetanankola.com/sports/</link>
+        <ror:resourceOf>sitemap</ror:resourceOf>
+        <ror:sortOrder>1</ror:sortOrder>
+        <ror:updatePeriod>week</ror:updatePeriod>
+        <ror:language>en</ror:language>
+        <ror:size>6</ror:size>
+        <ror:format>text/html</ror:format>
+        <ror:desc>Personal</ror:desc>
+        <ror:keywords>ankola, chetan</ror:keywords>
+      </item>
+  </channel>
+</rss>

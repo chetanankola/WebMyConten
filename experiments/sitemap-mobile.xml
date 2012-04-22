@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0">
+  <url>
+    <loc>http://experiments.chetanankola.com/</loc>
+    <lastmod>2011-11-13T05:46:47+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.1</priority>
+    <mobile:mobile/>
+  </url>
+  <url>
+    <loc>http://experiments.chetanankola.com/gadgets/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.1</priority>
+    <mobile:mobile/>
+  </url>
+  <url>
+    <loc>http://experiments.chetanankola.com/jobs/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.1</priority>
+    <mobile:mobile/>
+  </url>
+  <url>
+    <loc>http://experiments.chetanankola.com/music/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.1</priority>
+    <mobile:mobile/>
+  </url>
+  <url>
+    <loc>http://experiments.chetanankola.com/spiritual/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.1</priority>
+    <mobile:mobile/>
+  </url>
+  <url>
+    <loc>http://experiments.chetanankola.com/sports/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.1</priority>
+    <mobile:mobile/>
+  </url>
+</urlset>

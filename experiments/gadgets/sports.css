@@ -1,0 +1,243 @@
+body {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	font-family: verdana, arial, helvetica, sans-serif;
+	color: #ccc;
+	background-color: #fff;
+	}
+a {
+	text-decoration: none;
+	font-weight: bold;
+	color:  #ccc;
+	outline: none;
+	}
+a:visited {
+	color:  #ccc;
+	}
+a:active {
+	color:  #ccc;
+	}
+a:hover {
+	color: #ccc;
+	text-decoration: underline;
+	}
+.ahem {
+	display: none;
+	}
+strong, b {
+	font-weight: bold;
+	}
+p {
+	font-size: 12px;
+	line-height: 22px;
+	margin-top: 20px;
+	margin-bottom: 10px; 
+	}
+
+/* weird ie5win bug: all line-height to font-size ratios must agree or box gets pushed around. UPDATE: this has turned out to be very rare. my current recommendation is IGNORE this warning. at the moment i'm leaving it in only in case the issue turns up again. possibly the original bug in march 2001 was caused by an unusual combination of factors, although this solved it at the time.*/
+
+h1 {
+	font-size: 24px;
+	line-height: 44px;
+	font-weight: bold;
+	margin-top: 0;
+	margin-bottom: 0;
+	}
+h2 {
+	font-size: 18px;
+	line-height: 40px;
+	font-weight: bold;
+	margin-top: 0;
+	margin-bottom: 0;
+	}
+h3 {
+	font-size: 16px;
+	line-height: 22px;
+	font-weight: bold;
+	margin-top: 0;
+	margin-bottom: 0;
+	}
+h4 {
+	font-size: 14px;
+	line-height: 26px;
+	font-weight: bold;
+	margin-top: 0;
+	margin-bottom: 0;
+	}
+h5 {
+	font-size: 12px;
+	line-height: 22px;
+	font-weight: bold;
+	margin-top: 0;
+	margin-bottom: 0;
+	}
+h6 {
+	font-size: 10px;
+	line-height: 18px;
+	font-weight: bold;
+	margin-top: 0;
+	margin-bottom: 0;
+	}
+img {
+	border: 0;
+	}
+.nowrap {
+	white-space: nowrap;
+	font-size: 10px;
+	font-weight: bold;
+	margin-top: 0;
+	margin-bottom: 0;
+/* must be combined with nobr in html for ie5win */
+	}
+.tiny {
+	font-size: 9px;
+	line-height: 16px;
+	margin-top: 15px;
+	margin-bottom: 5px; 
+	}	 
+#top {
+	margin: 20px 20px 0px 20px;
+	padding: 10px;
+	border: 5px solid #ccc;
+	background: #666;
+	height: 100px; /* ie5win fudge begins */
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	height: 70px;
+	box-shadow: 0px 0px 17px 0px #ccc;
+	-moz-box-shadow:0px 0px 17px 0px #ccc;
+	-webkit-box-shadow:0px 0px 17px 0px #ccc;
+	border-radius: 6px 6px 6px 6px;
+	background-color: #fff;zoom: 1;filter: progid:DXImageTransform.Microsoft.Shadow(color='#969696', Direction=135, Strength=3);
+	}
+html>body #top {
+	height: 70px; /* ie5win fudge ends */
+	}
+#top h1 {
+	font-size: 24px;
+	line-height: 44px;
+	font-weight: bold;
+	margin-top: 0;
+	margin-bottom: 0;
+	color:#777;
+}
+#left {
+	position: absolute;
+	top: 120px;
+	left: 0px;
+	margin: 20px;
+	padding: 10px;
+	
+	background: #666;
+	width: 150px; /* ie5win fudge begins */
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	min-width: 270px;
+/*
+	box-shadow: 2px 2px 2px #000;
+	-moz-box-shadow:2px 2px 2px #000;
+	-webkit-box-shadow:2px 2px 2px #000;
+*/
+	box-shadow:0 10px 10px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow:0 10px 10px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow:0 10px 10px rgba(0, 0, 0, 0.3);
+	border-radius: 6px 6px 6px 6px;
+	background-color: #fff;zoom: 1;filter: progid:DXImageTransform.Microsoft.Shadow(color='#969696', Direction=135, Strength=3);
+
+	}
+html>body #left {
+	width: 120px; /* ie5win fudge ends */
+	}
+#middle {
+	margin: 20px 190px 20px 330px;
+	padding: 10px;
+	
+	background: #666;
+	box-shadow:0 1px 10px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow:0 1px 10px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow:0 1px 10px rgba(0, 0, 0, 0.3);
+	border-radius: 6px 6px 6px 6px;
+	background-color: #fff;zoom: 1;filter: progid:DXImageTransform.Microsoft.Shadow(color='#969696', Direction=135, Strength=3);
+	}
+
+#middle p {
+	font-size: 12px;
+	line-height: 22px;
+	margin-top: 20px;
+	margin-bottom: 10px; 
+	color:#666;
+}
+
+#foot {
+	position:fixed;
+	bottom:1px;
+	width:100%;
+	height:30px;
+	left:0;
+background: white url(../images/menu_tile.png) 50% -210px repeat-x;
+
+
+	box-shadow: 2px 2px 17px 0px #000;
+	-moz-box-shadow:2px 2px 17px 0px #000;
+	-webkit-box-shadow:2px 2px 17px 0px #000;
+}
+#foot p {
+	padding: 5px;
+
+	
+	font-size: 10px;
+	line-height: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px; 
+	margin-left:35%;
+	color:#666;	
+}
+
+#bleh {
+background: white url(../images/menu_tile.png) 50% -210px repeat-x;
+}
+
+
+#footer {
+	margin: 20px 190px 20px 190px;
+
+	padding: 5px;
+	background: #666;
+	box-shadow: 2px 2px 2px #000;
+	-moz-box-shadow:2px 2px 2px #000;
+	-webkit-box-shadow:2px 2px 2px #000;
+	background-color: #fff;zoom: 1;filter: progid:DXImageTransform.Microsoft.Shadow(color='#969696', Direction=135, Strength=3);
+	opacity:0.6;
+		border-radius: 6px 6px 6px 6px;
+	}
+#footer p {
+	font-size: 10px;
+	line-height: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px; 
+	color:#666;
+}
+
+
+#right {
+	position: absolute;
+	top: 120px;
+	right: 0px; /* Opera5.02 will show a space at right when there is no scroll bar */
+	margin: 20px;
+	padding: 10px;
+	border: 5px solid #ccc;
+	background: #666;
+	width: 150px; /* ie5win fudge begins */
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	width: 120px;
+	}
+html>body #right {
+	width: 120px; /* ie5win fudge ends */
+	}
+pre {
+	font-size: 12px;
+	line-height: 22px;
+	margin-top: 20px;
+	margin-bottom: 10px; 
+	}
